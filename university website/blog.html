@@ -1,0 +1,147 @@
+<!--HTML file-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+
+    <!--favorite icon-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+
+    <!--Link for icon not working-->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+
+<!--Font awesome for icon-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    
+
+    <title>University Website Design</title>
+
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <!--Close icon-->
+                <i class="fa fa-times" onclick="hideMenu()"></i>  <!--onclick is a javascript thing-->
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <!--menu bar icon -->
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Our Certificate & Online Programs For 2021</h1>
+
+    </section>
+    <!------------------------ blog page content---------------->
+
+    <section class="blog-content">
+
+        <div class="row">
+            <div class="blog-left">
+                <img src="images/certificate.jpg" alt="certificate">
+                <h2>Our Certificate & Online Programs For 2021</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quaerat numquam odit repudiandae eum non sequi suscipit molestias. Quo, rem dolorem molestiae in quam non! Non, repudiandae? Labore, ullam ut.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis enim unde doloremque recusandae optio expedita magni earum praesentium porro labore id quod itaque et, voluptatibus fugiat hic amet! Architecto, dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ratione fugiat illum eligendi quod alias debitis facilis recusandae dolorem ad neque vel exercitationem suscipit optio, explicabo quasi assumenda deleniti distinctio?</p>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis explicabo, nobis repellat aliquam non mollitia id. Corrupti, vitae blanditiis. In tempora magni fugiat deleniti doloremque consequuntur dolore consectetur dignissimos sunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci magnam dolores a non corrupti dolorem minima molestiae ea distinctio aliquid, iure sequi odit. Ullam minima veniam aliquid. Neque, nihil similique!</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis possimus consequatur impedit tempore ducimus. Repellat nisi praesentium earum omnis nam soluta aut adipisci sed vitae, harum quasi voluptates aliquam mollitia!</p>
+                
+
+                 <!-----------comment box------------->
+                <div class="comment-box">
+                    <h3>Leave a comment</h3>
+                    <form class="comment-form">
+                        <input type="text" placeholder="Enter Name">
+                        <input type="email" placeholder="Enter E-mail">
+                        <textarea rows="5" placeholder="Your Comment"></textarea>
+                        <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+                    </form>
+
+                </div>
+            
+            </div>
+            <div class="blog-right">
+                <h3>Post Categories</h3>
+                <div>
+                    <span>Bussiness Analytics</span>
+                    <span>21</span>
+                </div>
+                <div>
+                    <span>Machine Learning</span>
+                    <span>15</span>
+                </div>
+                <div>
+                    <span>Data Science</span>
+                    <span>22</span>
+                </div>
+                <div>
+                    <span>Computer Science</span>
+                    <span>34</span>
+                </div>
+                <div>
+                    <span>AutoCAD</span>
+                    <span>42</span>
+                </div>
+                <div>
+                    <span>Journalism</span>
+                    <span>22</span>
+                </div>
+                <div>
+                    <span>Commerce</span>
+                    <span>30</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+
+    <!-------------------Footer---------->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis in facilis quae officiis dolores <br> aliquid voluptatum, aliquam repellat deserunt quod quis soluta consequatur.</p>
+    <div class="icon">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i> by Gowtham </p>
+
+
+</section>
+
+
+    <!--Javascript for toggle menu-->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
