@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="preloader"></div>
+
+    <div class="header">
+
+        <video autoplay loop class="background-video" muted>
+            <source src="images/video.mp4" type="video/mp4">
+        </video>
+        
+        <nav>
+            <img src="images/logo.png" alt="logo">
+            <ul class="nav-links">
+                <li><a href="">Home</a></li>
+                <li><a href="">Courses</a></li>
+                <li><a href="">Reviews</a></li>
+                <li><a href="">Contact</a></li>
+                <li class="btn">Sign up</li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <h1>Learn Anything Online</h1>
+            <form action="">
+                <input type="text" placeholder=" &#x270e;  Enter Keywords">
+                <button type="submit">Find Course</button>
+            </form>
+
+            <div class="category-list">
+                <div class="category">
+                    <img src="images/coding.png" alt="coding">
+                    <p>Web Dev</p>
+                </div>
+                <div class="category">
+                    <img src="images/exercise.png" alt="exercise">
+                    <p>Yoga</p>
+                </div>
+                <div class="category">
+                    <img src="images/guitar.png" alt="guitar">
+                    <p>Music</p>
+                </div>
+                <div class="category">
+                    <img src="images/console.png" alt="console">
+                    <p>Game Dev</p>
+                </div>
+                <div class="category">
+                    <img src="images/language.png" alt="language">
+                    <p>Language</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+    <script>
+
+        var preloader = document.getElementById("preloader");
+        
+        window.addEventListener("load", function(){
+            preloader.style.display= "none";
+        })
+    </script>
+
+
+</html>

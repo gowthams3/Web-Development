@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    padding: 0 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav img{
+    width: 140px;
+    cursor: pointer;
+}
+.nav-links{
+    padding: 28px;
+}
+.nav-links li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 15px;
+}
+.nav-links li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 0;
+    position: relative;
+}
+.nav-links li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background: #ff3d00;
+    height: 2px;
+    transition: width 0.5s;
+}
+.nav-links li a:hover::after{
+    width: 100%;
+}
+.btn{
+    color: #fff;
+    background: #ff3d00;
+    padding: 10px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    max-width: 900px;
+    width: 90%;
+    text-align: center;
+    padding-top: 50px;
+}
+.content h1{
+    font-size: 65px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.content form{
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex ;
+}
+.content form input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: 18px;
+}
+.content form button{
+    background: #ff3d00;
+    color: #fff;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.category-list{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 40px;
+}
+.category{
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 61, 0, 0.15);
+    margin: 0 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.category img{
+    width: 25px;
+    margin-bottom: 5px;
+}
+.background-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+@media (min-aspect-ratio: 16/9){
+    .background-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .background-video{
+        width: auto;
+        height: 100%;
+    }
+}
+#preloader{
+    background: #000 url(images/preloader.gif) no-repeat center center ;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-size: 15%;
+}
