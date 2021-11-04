@@ -1,0 +1,34 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    color: #143d59;
+}
+table,tr,td,th {
+    text-align: center;
+}
+td{
+    font-weight: 500;
+}
+.container{
+    margin-top:50px;
+    background: #f4b41a;
+    padding: 30px;
+    border-radius: 10px;
+}
+.container h2{
+    margin-bottom: 30px;
+    margin-top: -10px;
+    color: white;
+}
+table tbody tr td:nth-child(4) a i{
+    color: rgb(0, 174, 255);
+    font-size: 18px;
+}
+table tbody tr td:nth-child(5) a i{
+    color: red;
+    font-size: 18px;
+}
+h3{
+    color:#fff;
+    text-align: center;
+}
+
