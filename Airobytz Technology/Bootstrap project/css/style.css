@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----------navbar--------- */
+#m-navbar{
+    background-color: white;
+    z-index: 5;
+}
+
+#brand-name{
+    font-weight: 500;
+    font-size: 20px;
+}
+li{
+    padding: 5px;
+}
+.nav-links{
+    font-size: 16px;
+    font-weight: 400;
+    border: 2px solid transparent;
+}
+.nav-link:hover{
+    border-bottom: 2px solid blue;
+}
+
+/* ----------Home---------- */
+span{
+    color: blue;
+    font-weight: 900;
+}
+p{
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* ----------About ---------*/
+#myimg{
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    width: 25rem;
+    border-radius: 50px;
+}
+#about h6{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+/* -------services------- */
+.card img{
+    height: 250px;
+    transition: 1s;
+}
+.inner{
+    overflow: hidden;
+}
+.card img:hover{
+    transform: scale(1.5);
+    transition: 1s;
+}
+
+/*----- form -------*/
+
+form{
+    padding: 40px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 30px;
+}
