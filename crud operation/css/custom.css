@@ -1,0 +1,19 @@
+*
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: tomato;
+    font-size: 24px;
+}
+.container
+{
+    margin-top: 60px;
+    background-color: #232323;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+}
+h2
+{
+    color: white;
+    text-transform: uppercase;
+}
