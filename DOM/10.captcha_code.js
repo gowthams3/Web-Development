@@ -1,0 +1,47 @@
+const changeTextBtn = document.querySelector('.change-text');
+const readTextBtn = document.querySelector('.read-text');
+const code = document.querySelector('#code');
+const input = document.querySelector('.user-input input');
+const submitBtn = document.querySelector('.btn')
+
+changeTextBtn.addEventListener('click', ()=>{
+    code.textContent = createCaptcha();
+
+});
+
+window.addEventListener('load', () => {
+    code.textContent = createCaptcha();
+})
+function createCaptcha(){
+    let letter = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+    'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+    '0','1','2','3','4','5','6','7','8','9'];
+    let a = letter[Math.floor(Math.random() * letter.length)] ;
+    let b = letter[Math.floor(Math.random() * letter.length)] ;
+    let c = letter[Math.floor(Math.random() * letter.length)] ;
+    let d = letter[Math.floor(Math.random() * letter.length)] ;
+    let e = letter[Math.floor(Math.random() * letter.length)] ;
+    let f = letter[Math.floor(Math.random() * letter.length)] ;
+    let g = letter[Math.floor(Math.random() * letter.length)] ;
+
+    let code = a + b + c + d + e + f + g ;
+    return code;
+}
+
+submitBtn.addEventListener('click', ()=>{
+    let val = input.value ;
+    if (val == '')
+    {
+        alert("Please Enter the Captcha")
+    }
+    else if(val === code.textContent){
+        alert("Valid code")
+    }
+    else{
+        alert("Invalid code")
+    }
+})
+readTextBtn.addEventListener('click', () =>{
+    let text = code.textContent;
+    responsiveVoice.speak(text);
+})

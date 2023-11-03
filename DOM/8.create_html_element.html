@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: aqua;
+            width: 100%;
+            height: 100vh;
+        }
+        button{
+            padding: 10px 30px;
+            font-size: 16px;
+            background: rgb(4, 255, 4);
+            outline: none;
+            border: none;
+            border-radius: 30px;
+            margin: 15px;
+        }
+        ul
+        {
+            margin-top: 60px;
+            width: 40%;
+        }
+        ul li{
+            list-style: none;
+            margin: 15px;
+            padding: 15px 0;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 5px;
+        }
+        input{
+            padding: 10px 30px;
+            margin-right: 30px;
+            border-radius: 2px;
+            outline: none;
+            border: none;
+        }
+        .top-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        h1{
+            margin-top: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <center><h1>TO-DO LIST</h1></center>
+        
+        <div class="top-content">              
+            <form action="" id="myForm"> 
+            <input type="text" placeholder="Enter tasks here.." id="text-input">
+        </form> 
+            <button id="add-item">Add Item</button>
+            <button id="update-btn">Update First Item</button>
+            <button id="remove-btn">Remove First Item</button>
+        </div>
+        <center>
+        <ul id="list">
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+        </ul>
+    </center>
+
+    </section>
+
+
+    <script src="8.create_html_element.js"></script>
+</body>
+</html>

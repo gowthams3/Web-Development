@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Code</title>
+    <script src="https://kit.fontawesome.com/12d555b0db.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1a1d23;
+        }
+        .captcha-container{
+            min-width: 50%;
+            max-width: 50%;
+            display: flex;
+            background: #ffff;
+            flex-direction: column;
+            border-radius: 20px;
+        }
+        .header{
+            background: #037ae2;
+            color: #fff;
+            font-size: 1.5rem;
+            width: 100%;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+            padding: 15px;
+        }
+        .security-code{
+            width: 100%;
+            height: 250px;
+            position: relative;
+            background-color: #0a5496;
+        }
+        .security-code p{
+            text-align: center;
+            line-height: 250px;
+            font-weight: bold;
+            font-size: 5vw;
+            font-family: "Montserrat", sans-serif;
+            letter-spacing: 10px;
+            user-select: none;
+            color: #fff;
+        }
+        .icon{
+            position: absolute;
+            bottom: 0;
+            right: 5px;
+        }
+        .icon .fas{
+            color: #fff;
+            font-size: 1.5rem;
+            padding: 10px 5px;
+            cursor: pointer;
+            transition: 0.15s ease;
+        }
+        .icon .fas:hover{
+            color: #037ae2;
+        }
+        .user-input{
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .user-input input{
+            border-radius: 20px 0 0 20px;
+            outline: none;
+            border: 1px solid gray;
+            border-right: none;
+            padding: 12px;
+            width: 60%;
+            font-size: 1.2rem;
+        }
+        .user-input .btn{
+            border: none;
+            outline: none;
+            background: #037ae2;
+            color: #fff;
+            padding: 12px;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+            transition: 0.15s ease;
+            font-size: 1.2rem;
+        }
+        .user-input .btn:hover{
+            background: #036cc9;
+        }
+    </style>
+</head>
+<body>
+    <div class="captcha-container">
+        <div class="header">Security Check</div>
+    <div class="security-code">
+        <p id="code">sdejfej</p>
+        <div class="icon">
+            <span class="read-text">
+                <i class="fas fa-headphones-alt"></i>
+            </span>
+            <span class="change-text">
+                <i class="fas fa-sync-alt"></i>
+            </span>
+        </div>
+    </div>
+    <div class="user-input">
+        <input type="text" placeholder="Type the text here..">
+        <button class="btn" type="submit">Submit</button>
+    </div>
+</div>
+    <script src="10.captcha_code.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+</body>
+</html>
