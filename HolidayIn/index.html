@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12d555b0db.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white mb-4 pb-2 d-block">
+            <div class="upper-aside">
+                <ul class="header-aside-content-desc mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" fill="currentColor"
+                                class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                    style="color:#dd0a6a" />
+                            </svg>Login/Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" fill="currentColor"
+                                class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+                                    style="color:#dd0a6a;" />
+                            </svg>My Booking</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container" style="text-align: center;">
+                <a class="navbar-brand" href="#">HolidayIn</a>
+                <div class="icon-nav d-md-flex d-lg-none d-sm-flex">
+                    <ul>
+                        <li><span><img width="15" height="15" src="https://img.icons8.com/ios/50/ffffff/trust--v1.png"
+                                    alt="trust--v1" /></span><a href="">Rate</a></li>
+                        <li><span><img width="15" height="15"
+                                    src="https://img.icons8.com/fluency-systems-regular/48/ffffff/violet-flower.png"
+                                    alt="violet-flower" /></span><a href="post-listing">Hotels</a></li>
+                        <li><span><img width="15" height="15" src="https://img.icons8.com/ios/50/ffffff/marker--v1.png"
+                                    alt="marker--v1" /></span><a href="">Location</a></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 mx-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="post-listing.html">Hotels</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Destinations</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Help</a>
+                        </li>
+                    </ul>
+                    <aside>
+                        <ul class="header-aside-content-desc mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                            style="color:#dd0a6a" />
+                                    </svg>Login/Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-plus-circle-fill"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+                                            style="color:#dd0a6a;" />
+                                    </svg>My Booking</a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                <button class="openbtn" onclick="showMenu()"><img width="50" height="50"
+                        src="https://img.icons8.com/ios-filled/50/ffffff/menu--v1.png" alt="menu--v1" />
+                </button>
+        </nav>
+    </header>
+
+    <!-- sidemenu -->
+
+    <div class="side-menu show-menu" id="show-menu">
+        <div class="menu-content">
+            <div class="menu-header">
+                <span class="logo menu-logo"></span>
+                <span class="close menu-close" onclick="closeMenu()""></span>
+        </div>
+        <div class=" modal-content-block">
+                    <nav class="modal-content-nav">
+                        <ul class="modal-content-list px-0">
+                            <li class="content-list"><a href="index.html">Home</a></li>
+                            <li class="content-list"><a href="post-listing">Hotels</a></li>
+                            <li class="content-list"><a href="">Destinations</a></li>
+                            <li class="content-list"><a href="">Contact</a></li>
+                            <li class="content-list"><a href="">Helps</a></li>
+                        </ul>
+                    </nav>
+            </div>
+            <div class="side-menu-footer">
+                <div class="header-aside-content">
+                    <a class="nav-link" href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                style="color:#dd0a6a" />
+                        </svg>Login/Register</a>
+                    <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+                                style="color:#dd0a6a;" />
+                        </svg>My Booking</a>
+                </div>
+
+                <div class="footer-social-icon">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <a href="#" target="blank" class="footer-social-icon"><span
+                                        class="insta social-icon-image"><img class="img-fluid img-sec"
+                                            src="https://img.icons8.com/ios/30/ffffff/facebook-new.png"
+                                            alt="facebook-new" /></span></a>
+                            </div>
+                            <div class="col-4"><a href="#" target="blank" class="footer-social-icon"><span
+                                        class="twitter social-icon-image"><img class="img-fluid img-sec"
+                                            src="https://img.icons8.com/ios/30/ffffff/instagram-new--v1.png"
+                                            alt="instagram-new--v1" /></span></a></div>
+                            <div class="col-4"><a href="#" target="blank" class="footer-social-icon"><span
+                                        class="facebook social-icon-image"><img class="img-fluid img-sec"
+                                            src="https://img.icons8.com/ios/30/ffffff/twitter--v1.png"
+                                            alt="twitter--v1" /></span></a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------ Body-content ------>
+
+    <div class="container">
+        <div class="header-conntent">
+            <h1>Luxurious Stays Await - Book Your Ideal Getaway Today!</h1>
+            <p>Welcome to our world of hospitality and comfort! </p>
+        </div>
+        <div class="form-content">
+            <form class="form-verticle">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-12 no-padd">
+                        <div class="form-box">
+                            <i class="banner-icon icon-map-pin"></i>
+                            <select class="selectpicker form-control" id="category">
+                                <option value="">Hotels</option>
+                                <option value="">Resorts</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-12 no-padd">
+                        <div class="form-box">
+                            <i class="banner-icon icon-map-pin"></i>
+                            <select class="selectpicker form-control" data-live-search="true" id="city">
+                                <option data-tokens="ketchup mustard" value="choose">Choose City</option>
+                                <option value="achalpur">Achalpur, Maharashtra</option>
+                                <option value="achhnera">Achhnera, Uttar Pradesh</option>
+                                <option value="adalaj">Adalaj, Gujarat</option>
+                                <option value="adilabad">Adilabad, Telangana</option>
+                                <option value="adityapur">Adityapur, Jharkhand</option>
+                                <option value="adoni">Adoni, Andhra Pradesh</option>
+                                <option value="adoor">Adoor, Kerala</option>
+                                <option value="adra">Adra, West Bengal</option>
+                                <option value="adyar">Adyar, Karnataka</option>
+                                <option value="afzalpur">Afzalpur, Karnataka</option>
+                                <option value="agartala">Agartala, Tripura</option>
+                                <option value="agra">Agra, Uttar Pradesh</option>
+                                <option value="ahmedabad">Ahmedabad, Gujarat</option>
+                                <option value="ahmednagar">Ahmednagar, Maharashtra</option>
+                                <option value="aizawl">Aizawl, Mizoram</option>
+                                <option value="ajmer">Ajmer, Rajasthan</option>
+                                <option value="akola">Akola, Maharashtra</option>
+                                <option value="akot">Akot, Maharashtra</option>
+                                <option value="alappuzha">Alappuzha, Kerala</option>
+                                <option value="aligarh">Aligarh, Uttar Pradesh</option>
+                                <option value="alipurdurban-agglomerationr">AlipurdUrban Agglomerationr, West Bengal
+                                </option>
+                                <option value="alirajpur">Alirajpur, Madhya Pradesh</option>
+                                <option value="allahabad">Allahabad, Uttar Pradesh</option>
+                                <option value="alwar">Alwar, Rajasthan</option>
+                                <option value="amalapuram">Amalapuram, Andhra Pradesh</option>
+                                <option value="amalner">Amalner, Maharashtra</option>
+                                <option value="ambejogai">Ambejogai, Maharashtra</option>
+                                <option value="ambikapur">Ambikapur, Chhattisgarh</option>
+                                <option value="amravati">Amravati, Maharashtra</option>
+                                <option value="amreli">Amreli, Gujarat</option>
+                                <option value="amritsar">Amritsar, Punjab</option>
+                                <option value="amroha">Amroha, Uttar Pradesh</option>
+                                <option value="anakapalle">Anakapalle, Andhra Pradesh</option>
+                                <option value="anand">Anand, Gujarat</option>
+                                <option value="anantapur">Anantapur, Andhra Pradesh</option>
+                                <option value="anantnag">Anantnag, Jammu and Kashmir</option>
+                                <option value="anjangaon">Anjangaon, Maharashtra</option>
+                                <option value="anjar">Anjar, Gujarat</option>
+                                <option value="ankleshwar">Ankleshwar, Gujarat</option>
+                                <option value="arakkonam">Arakkonam, Tamil Nadu</option>
+                                <option value="arambagh">Arambagh, West Bengal</option>
+                                <option value="araria">Araria, Bihar</option>
+                                <option value="arrah">Arrah, Bihar</option>
+                                <option value="arsikere">Arsikere, Karnataka</option>
+                                <option value="aruppukkottai">Aruppukkottai, Tamil Nadu</option>
+                                <option value="arvi">Arvi, Maharashtra</option>
+                                <option value="arwal">Arwal, Bihar</option>
+                                <option value="asansol">Asansol, West Bengal</option>
+                                <option value="asarganj">Asarganj, Bihar</option>
+                                <option value="ashok-nagar">Ashok Nagar, Madhya Pradesh</option>
+                                <option value="athni">Athni, Karnataka</option>
+                                <option value="attingal">Attingal, Kerala</option>
+                                <option value="aurangabad">Aurangabad, Maharashtra</option>
+                                <option value="aurangabad">Aurangabad, Bihar</option>
+                                <option value="azamgarh">Azamgarh, Uttar Pradesh</option>
+                                <option value="bagaha">Bagaha, Bihar</option>
+                                <option value="bageshwar">Bageshwar, Uttarakhand</option>
+                                <option value="bahadurgarh">Bahadurgarh, Haryana</option>
+                                <option value="baharampur">Baharampur, West Bengal</option>
+                                <option value="bahraich">Bahraich, Uttar Pradesh</option>
+                                <option value="balaghat">Balaghat, Madhya Pradesh</option>
+                                <option value="balangir">Balangir, Odisha</option>
+                                <option value="baleshwar-town">Baleshwar Town, Odisha</option>
+                                <option value="ballari">Ballari, Karnataka</option>
+                                <option value="balurghat">Balurghat, West Bengal</option>
+                                <option value="bangalore1">Bangalore, Karnataka</option>
+                                <option value="bankura">Bankura, West Bengal</option>
+                                <option value="bapatla">Bapatla, Andhra Pradesh</option>
+                                <option value="baramula">Baramula, Jammu and Kashmir</option>
+                                <option value="barbil">Barbil, Odisha</option>
+                                <option value="bargarh">Bargarh, Odisha</option>
+                                <option value="barh">Barh, Bihar</option>
+                                <option value="baripada-town">Baripada Town, Odisha</option>
+                                <option value="barmer">Barmer, Rajasthan</option>
+                                <option value="barnala">Barnala, Punjab</option>
+                                <option value="barpeta">Barpeta, Assam</option>
+                                <option value="batala">Batala, Punjab</option>
+                                <option value="bathinda">Bathinda, Punjab</option>
+                                <option value="begusarai">Begusarai, Bihar</option>
+                                <option value="belagavi">Belagavi, Karnataka</option>
+                                <option value="bellampalle">Bellampalle, Telangana</option>
+                                <option value="belonia">Belonia, Tripura</option>
+                                <option value="bettiah">Bettiah, Bihar</option>
+                                <option value="bhaburban-agglomeration">BhabUrban Agglomeration, Bihar</option>
+                                <option value="bhadrachalam">Bhadrachalam, Telangana</option>
+                                <option value="bhadrak">Bhadrak, Odisha</option>
+                                <option value="bhagalpur">Bhagalpur, Bihar</option>
+                                <option value="bhainsa">Bhainsa, Telangana</option>
+                                <option value="bharatpur">Bharatpur, Rajasthan</option>
+                                <option value="bharuch">Bharuch, Gujarat</option>
+                                <option value="bhatapara">Bhatapara, Chhattisgarh</option>
+                                <option value="bhavnagar">Bhavnagar, Gujarat</option>
+                                <option value="bhawanipatna">Bhawanipatna, Odisha</option>
+                                <option value="bheemunipatnam">Bheemunipatnam, Andhra Pradesh</option>
+                                <option value="bhilai-nagar">Bhilai Nagar, Chhattisgarh</option>
+                                <option value="bhilwara">Bhilwara, Rajasthan</option>
+                                <option value="bhimavaram">Bhimavaram, Andhra Pradesh</option>
+                                <option value="bhiwandi">Bhiwandi, Maharashtra</option>
+                                <option value="bhiwani">Bhiwani, Haryana</option>
+                                <option value="bhongir">Bhongir, Telangana</option>
+                                <option value="bhopal">Bhopal, Madhya Pradesh</option>
+                                <option value="bhubaneswar">Bhubaneswar, Odisha</option>
+                                <option value="bhuj">Bhuj, Gujarat</option>
+                                <option value="bikaner">Bikaner, Rajasthan</option>
+                                <option value="bilaspur">Bilaspur, Chhattisgarh</option>
+                                <option value="bobbili">Bobbili, Andhra Pradesh</option>
+                                <option value="bodhan">Bodhan, Telangana</option>
+                                <option value="bokaro-steel-city">Bokaro Steel City, Jharkhand</option>
+                                <option value="bongaigaon-city">Bongaigaon City, Assam</option>
+                                <option value="brahmapur">Brahmapur, Odisha</option>
+                                <option value="buxar">Buxar, Bihar</option>
+                                <option value="byasanagar">Byasanagar, Odisha</option>
+                                <option value="chaibasa">Chaibasa, Jharkhand</option>
+                                <option value="chalakudy">Chalakudy, Kerala</option>
+                                <option value="chandausi">Chandausi, Uttar Pradesh</option>
+                                <option value="chandigarh">Chandigarh, Chandigarh</option>
+                                <option value="changanassery">Changanassery, Kerala</option>
+                                <option value="charkhi-dadri">Charkhi Dadri, Haryana</option>
+                                <option value="chatra">Chatra, Jharkhand</option>
+                                <option value="chennai">Chennai, Tamil Nadu</option>
+                                <option value="cherthala">Cherthala, Kerala</option>
+                                <option value="chhapra">Chhapra, Bihar</option>
+                                <option value="chhapra">Chhapra, Gujarat</option>
+                                <option value="chikkamagaluru">Chikkamagaluru, Karnataka</option>
+                                <option value="chilakaluripet">Chilakaluripet, Andhra Pradesh</option>
+                                <option value="chirala">Chirala, Andhra Pradesh</option>
+                                <option value="chirkunda">Chirkunda, Jharkhand</option>
+                                <option value="chirmiri">Chirmiri, Chhattisgarh</option>
+                                <option value="chittoor">Chittoor, Andhra Pradesh</option>
+                                <option value="chittur-thathamangalam">Chittur-Thathamangalam, Kerala</option>
+                                <option value="coimbatore">Coimbatore, Tamil Nadu</option>
+                                <option value="cuttack">Cuttack, Odisha</option>
+                                <option value="dalli-rajhara">Dalli-Rajhara, Chhattisgarh</option>
+                                <option value="darbhanga">Darbhanga, Bihar</option>
+                                <option value="darjiling">Darjiling, West Bengal</option>
+                                <option value="davanagere">Davanagere, Karnataka</option>
+                                <option value="deesa">Deesa, Gujarat</option>
+                                <option value="dehradun">Dehradun, Uttarakhand</option>
+                                <option value="dehri-on-sone">Dehri-on-Sone, Bihar</option>
+                                <option value="delhi">Delhi, Delhi</option>
+                                <option value="deoghar">Deoghar, Jharkhand</option>
+                                <option value="dhamtari">Dhamtari, Chhattisgarh</option>
+                                <option value="dhanbad">Dhanbad, Jharkhand</option>
+                                <option value="dharmanagar">Dharmanagar, Tripura</option>
+                                <option value="dharmavaram">Dharmavaram, Andhra Pradesh</option>
+                                <option value="dhenkanal">Dhenkanal, Odisha</option>
+                                <option value="dhoraji">Dhoraji, Gujarat</option>
+                                <option value="dhubri">Dhubri, Assam</option>
+                                <option value="dhule">Dhule, Maharashtra</option>
+                                <option value="dhuri">Dhuri, Punjab</option>
+                                <option value="dibrugarh">Dibrugarh, Assam</option>
+                                <option value="dimapur">Dimapur, Nagaland</option>
+                                <option value="diphu">Diphu, Assam</option>
+                                <option value="dispur">Dispur, Assam</option>
+                                <option value="dumka">Dumka, Jharkhand</option>
+                                <option value="dumraon">Dumraon, Bihar</option>
+                                <option value="durg">Durg, Chhattisgarh</option>
+                                <option value="eluru">Eluru, Andhra Pradesh</option>
+                                <option value="english-bazar">English Bazar, West Bengal</option>
+                                <option value="erode">Erode, Tamil Nadu</option>
+                                <option value="etawah">Etawah, Uttar Pradesh</option>
+                                <option value="faridabad">Faridabad, Haryana</option>
+                                <option value="faridkot">Faridkot, Punjab</option>
+                                <option value="farooqnagar">Farooqnagar, Telangana</option>
+                                <option value="fatehabad">Fatehabad, Haryana</option>
+                                <option value="fatehpur-sikri">Fatehpur Sikri, Uttar Pradesh</option>
+                                <option value="fazilka">Fazilka, Punjab</option>
+                                <option value="firozabad">Firozabad, Uttar Pradesh</option>
+                                <option value="firozpur">Firozpur, Punjab</option>
+                                <option value="firozpur-cantt.">Firozpur Cantt., Punjab</option>
+                                <option value="forbesganj">Forbesganj, Bihar</option>
+                                <option value="gadwal">Gadwal, Telangana</option>
+                                <option value="gandhinagar">Gandhinagar, Gujarat</option>
+                                <option value="gangarampur">Gangarampur, West Bengal</option>
+                                <option value="ganjbasoda">Ganjbasoda, Madhya Pradesh</option>
+                                <option value="gaya">Gaya, Bihar</option>
+                                <option value="giridih">Giridih, Jharkhand</option>
+                                <option value="goalpara">Goalpara, Assam</option>
+                                <option value="gobichettipalayam">Gobichettipalayam, Tamil Nadu</option>
+                                <option value="gobindgarh">Gobindgarh, Punjab</option>
+                                <option value="godhra">Godhra, Gujarat</option>
+                                <option value="gohana">Gohana, Haryana</option>
+                                <option value="gokak">Gokak, Karnataka</option>
+                                <option value="gooty">Gooty, Andhra Pradesh</option>
+                                <option value="gopalganj">Gopalganj, Bihar</option>
+                                <option value="gudivada">Gudivada, Andhra Pradesh</option>
+                                <option value="gudur">Gudur, Andhra Pradesh</option>
+                                <option value="gumia">Gumia, Jharkhand</option>
+                                <option value="guntakal">Guntakal, Andhra Pradesh</option>
+                                <option value="guntur">Guntur, Andhra Pradesh</option>
+                                <option value="gurdaspur">Gurdaspur, Punjab</option>
+                                <option value="gurgaon">Gurgaon, Haryana</option>
+                                <option value="guruvayoor">Guruvayoor, Kerala</option>
+                                <option value="guwahati">Guwahati, Assam</option>
+                                <option value="gwalior">Gwalior, Madhya Pradesh</option>
+                                <option value="habra">Habra, West Bengal</option>
+                                <option value="hajipur">Hajipur, Bihar</option>
+                                <option value="haldwani-cum-kathgodam">Haldwani-cum-Kathgodam, Uttarakhand</option>
+                                <option value="hansi">Hansi, Haryana</option>
+                                <option value="hapur">Hapur, Uttar Pradesh</option>
+                                <option value="hardoi-">Hardoi , Uttar Pradesh</option>
+                                <option value="hardwar">Hardwar, Uttarakhand</option>
+                                <option value="hazaribag">Hazaribag, Jharkhand</option>
+                                <option value="hindupur">Hindupur, Andhra Pradesh</option>
+                                <option value="hisar">Hisar, Haryana</option>
+                                <option value="hoshiarpur">Hoshiarpur, Punjab</option>
+                                <option value="hubli-dharwad">Hubli-Dharwad, Karnataka</option>
+                                <option value="hugli-chinsurah">Hugli-Chinsurah, West Bengal</option>
+                                <option value="hyderabad1">Hyderabad, Telangana</option>
+                                <option value="ichalkaranji">Ichalkaranji, Maharashtra</option>
+                                <option value="imphal">Imphal, Manipur</option>
+                                <option value="indore">Indore, Madhya Pradesh</option>
+                                <option value="itarsi">Itarsi, Madhya Pradesh</option>
+                                <option value="jabalpur">Jabalpur, Madhya Pradesh</option>
+                                <option value="jagdalpur">Jagdalpur, Chhattisgarh</option>
+                                <option value="jaggaiahpet">Jaggaiahpet, Andhra Pradesh</option>
+                                <option value="jagraon">Jagraon, Punjab</option>
+                                <option value="jagtial">Jagtial, Telangana</option>
+                                <option value="jaipur">Jaipur, Rajasthan</option>
+                                <option value="jalandhar">Jalandhar, Punjab</option>
+                                <option value="jalandhar-cantt.">Jalandhar Cantt., Punjab</option>
+                                <option value="jalpaiguri">Jalpaiguri, West Bengal</option>
+                                <option value="jamalpur">Jamalpur, Bihar</option>
+                                <option value="jammalamadugu">Jammalamadugu, Andhra Pradesh</option>
+                                <option value="jammu">Jammu, Jammu and Kashmir</option>
+                                <option value="jamnagar">Jamnagar, Gujarat</option>
+                                <option value="jamshedpur">Jamshedpur, Jharkhand</option>
+                                <option value="jamui">Jamui, Bihar</option>
+                                <option value="jangaon">Jangaon, Telangana</option>
+                                <option value="jatani">Jatani, Odisha</option>
+                                <option value="jehanabad">Jehanabad, Bihar</option>
+                                <option value="jhansi">Jhansi, Uttar Pradesh</option>
+                                <option value="jhargram">Jhargram, West Bengal</option>
+                                <option value="jharsuguda">Jharsuguda, Odisha</option>
+                                <option value="jhumri-tilaiya">Jhumri Tilaiya, Jharkhand</option>
+                                <option value="jind">Jind, Haryana</option>
+                                <option value="jodhpur">Jodhpur, Rajasthan</option>
+                                <option value="jorhat">Jorhat, Assam</option>
+                                <option value="kadapa">Kadapa, Andhra Pradesh</option>
+                                <option value="kadi">Kadi, Gujarat</option>
+                                <option value="kadiri">Kadiri, Andhra Pradesh</option>
+                                <option value="kagaznagar">Kagaznagar, Telangana</option>
+                                <option value="kailasahar">Kailasahar, Tripura</option>
+                                <option value="kaithal">Kaithal, Haryana</option>
+                                <option value="kakinada">Kakinada, Andhra Pradesh</option>
+                                <option value="kalimpong">Kalimpong, West Bengal</option>
+                                <option value="kalpi">Kalpi, Uttar Pradesh</option>
+                                <option value="kalyan-dombivali">Kalyan-Dombivali, Maharashtra</option>
+                                <option value="kamareddy">Kamareddy, Telangana</option>
+                                <option value="kancheepuram">Kancheepuram, Tamil Nadu</option>
+                                <option value="kandukur">Kandukur, Andhra Pradesh</option>
+                                <option value="kanhangad">Kanhangad, Kerala</option>
+                                <option value="kannur">Kannur, Kerala</option>
+                                <option value="kanpur">Kanpur, Uttar Pradesh</option>
+                                <option value="kapadvanj">Kapadvanj, Gujarat</option>
+                                <option value="kapurthala">Kapurthala, Punjab</option>
+                                <option value="karaikal">Karaikal, Puducherry</option>
+                                <option value="karimganj">Karimganj, Assam</option>
+                                <option value="karimnagar">Karimnagar, Telangana</option>
+                                <option value="karjat">Karjat, Maharashtra</option>
+                                <option value="karnal">Karnal, Haryana</option>
+                                <option value="karur">Karur, Tamil Nadu</option>
+                                <option value="karwar">Karwar, Karnataka</option>
+                                <option value="kasaragod">Kasaragod, Kerala</option>
+                                <option value="kashipur">Kashipur, Uttarakhand</option>
+                                <option value="kathurban-agglomeration">KathUrban Agglomeration, Jammu and Kashmir
+                                </option>
+                                <option value="katihar">Katihar, Bihar</option>
+                                <option value="kavali">Kavali, Andhra Pradesh</option>
+                                <option value="kayamkulam">Kayamkulam, Kerala</option>
+                                <option value="kendrapara">Kendrapara, Odisha</option>
+                                <option value="kendujhar">Kendujhar, Odisha</option>
+                                <option value="keshod">Keshod, Gujarat</option>
+                                <option value="khair">Khair, Uttar Pradesh</option>
+                                <option value="khambhat">Khambhat, Gujarat</option>
+                                <option value="khammam">Khammam, Telangana</option>
+                                <option value="khanna">Khanna, Punjab</option>
+                                <option value="kharagpur">Kharagpur, West Bengal</option>
+                                <option value="kharar">Kharar, Punjab</option>
+                                <option value="khowai">Khowai, Tripura</option>
+                                <option value="kishanganj">Kishanganj, Bihar</option>
+                                <option value="kochi">Kochi, Kerala</option>
+                                <option value="kodungallur">Kodungallur, Kerala</option>
+                                <option value="kohima">Kohima, Nagaland</option>
+                                <option value="kolar">Kolar, Karnataka</option>
+                                <option value="kolkata">Kolkata, West Bengal</option>
+                                <option value="kollam">Kollam, Kerala</option>
+                                <option value="koratla">Koratla, Telangana</option>
+                                <option value="korba">Korba, Chhattisgarh</option>
+                                <option value="kot-kapura">Kot Kapura, Punjab</option>
+                                <option value="kota">Kota, Rajasthan</option>
+                                <option value="kothagudem">Kothagudem, Telangana</option>
+                                <option value="kottayam">Kottayam, Kerala</option>
+                                <option value="kovvur">Kovvur, Andhra Pradesh</option>
+                                <option value="koyilandy">Koyilandy, Kerala</option>
+                                <option value="kozhikode">Kozhikode, Kerala</option>
+                                <option value="kullu">Kullu, Himachal Pradesh</option>
+                                <option value="kunnamkulam">Kunnamkulam, Kerala</option>
+                                <option value="kurnool">Kurnool, Andhra Pradesh</option>
+                                <option value="kyathampalle">Kyathampalle, Telangana</option>
+                                <option value="lachhmangarh">Lachhmangarh, Rajasthan</option>
+                                <option value="ladnu">Ladnu, Rajasthan</option>
+                                <option value="ladwa">Ladwa, Haryana</option>
+                                <option value="lahar">Lahar, Madhya Pradesh</option>
+                                <option value="laharpur">Laharpur, Uttar Pradesh</option>
+                                <option value="lakheri">Lakheri, Rajasthan</option>
+                                <option value="lakhimpur">Lakhimpur, Uttar Pradesh</option>
+                                <option value="lakhisarai">Lakhisarai, Bihar</option>
+                                <option value="lakshmeshwar">Lakshmeshwar, Karnataka</option>
+                                <option value="lal-gopalganj-nindaura">Lal Gopalganj Nindaura, Uttar Pradesh</option>
+                                <option value="lalganj">Lalganj, Bihar</option>
+                                <option value="lalganj">Lalganj, Uttar Pradesh</option>
+                                <option value="lalgudi">Lalgudi, Tamil Nadu</option>
+                                <option value="lalitpur">Lalitpur, Uttar Pradesh</option>
+                                <option value="lalsot">Lalsot, Rajasthan</option>
+                                <option value="lanka">Lanka, Assam</option>
+                                <option value="lar">Lar, Uttar Pradesh</option>
+                                <option value="lathi">Lathi, Gujarat</option>
+                                <option value="latur">Latur, Maharashtra</option>
+                                <option value="lilong">Lilong, Manipur</option>
+                                <option value="limbdi">Limbdi, Gujarat</option>
+                                <option value="lingsugur">Lingsugur, Karnataka</option>
+                                <option value="loha">Loha, Maharashtra</option>
+                                <option value="lohardaga">Lohardaga, Jharkhand</option>
+                                <option value="lonar">Lonar, Maharashtra</option>
+                                <option value="lonavla">Lonavla, Maharashtra</option>
+                                <option value="longowal">Longowal, Punjab</option>
+                                <option value="loni">Loni, Uttar Pradesh</option>
+                                <option value="losal">Losal, Rajasthan</option>
+                                <option value="lucknow">Lucknow, Uttar Pradesh</option>
+                                <option value="ludhiana">Ludhiana, Punjab</option>
+                                <option value="lumding">Lumding, Assam</option>
+                                <option value="lunawada">Lunawada, Gujarat</option>
+                                <option value="lunglei">Lunglei, Mizoram</option>
+                                <option value="macherla">Macherla, Andhra Pradesh</option>
+                                <option value="machilipatnam">Machilipatnam, Andhra Pradesh</option>
+                                <option value="madanapalle">Madanapalle, Andhra Pradesh</option>
+                                <option value="maddur">Maddur, Karnataka</option>
+                                <option value="madhepura">Madhepura, Bihar</option>
+                                <option value="madhubani">Madhubani, Bihar</option>
+                                <option value="madhugiri">Madhugiri, Karnataka</option>
+                                <option value="madhupur">Madhupur, Jharkhand</option>
+                                <option value="madikeri">Madikeri, Karnataka</option>
+                                <option value="madurai">Madurai, Tamil Nadu</option>
+                                <option value="magadi">Magadi, Karnataka</option>
+                                <option value="mahad">Mahad, Maharashtra</option>
+                                <option value="mahalingapura">Mahalingapura, Karnataka</option>
+                                <option value="maharajganj">Maharajganj, Bihar</option>
+                                <option value="maharajpur">Maharajpur, Madhya Pradesh</option>
+                                <option value="mahasamund">Mahasamund, Chhattisgarh</option>
+                                <option value="mahbubnagar">Mahbubnagar, Telangana</option>
+                                <option value="mahe">Mahe, Puducherry</option>
+                                <option value="mahemdabad">Mahemdabad, Gujarat</option>
+                                <option value="mahendragarh">Mahendragarh, Haryana</option>
+                                <option value="mahesana">Mahesana, Gujarat</option>
+                                <option value="mahidpur">Mahidpur, Madhya Pradesh</option>
+                                <option value="mahnar-bazar">Mahnar Bazar, Bihar</option>
+                                <option value="mahuva">Mahuva, Gujarat</option>
+                                <option value="maihar">Maihar, Madhya Pradesh</option>
+                                <option value="mainaguri">Mainaguri, West Bengal</option>
+                                <option value="makhdumpur">Makhdumpur, Bihar</option>
+                                <option value="makrana">Makrana, Rajasthan</option>
+                                <option value="malaj-khand">Malaj Khand, Madhya Pradesh</option>
+                                <option value="malappuram">Malappuram, Kerala</option>
+                                <option value="malavalli">Malavalli, Karnataka</option>
+                                <option value="malda">Malda, West Bengal</option>
+                                <option value="malegaon">Malegaon, Maharashtra</option>
+                                <option value="malerkotla">Malerkotla, Punjab</option>
+                                <option value="malkangiri">Malkangiri, Odisha</option>
+                                <option value="malkapur">Malkapur, Maharashtra</option>
+                                <option value="malout">Malout, Punjab</option>
+                                <option value="malpura">Malpura, Rajasthan</option>
+                                <option value="malur">Malur, Karnataka</option>
+                                <option value="manachanallur">Manachanallur, Tamil Nadu</option>
+                                <option value="manali">Manali, Himachal Praddesh</option>
+                                <option value="manasa">Manasa, Madhya Pradesh</option>
+                                <option value="manavadar">Manavadar, Gujarat</option>
+                                <option value="manawar">Manawar, Madhya Pradesh</option>
+                                <option value="mancherial">Mancherial, Telangana</option>
+                                <option value="mandalgarh">Mandalgarh, Rajasthan</option>
+                                <option value="mandamarri">Mandamarri, Telangana</option>
+                                <option value="mandapeta">Mandapeta, Andhra Pradesh</option>
+                                <option value="mandawa">Mandawa, Rajasthan</option>
+                                <option value="mandi">Mandi, Himachal Pradesh</option>
+                                <option value="mandi-dabwali">Mandi Dabwali, Haryana</option>
+                                <option value="mandideep">Mandideep, Madhya Pradesh</option>
+                                <option value="mandla">Mandla, Madhya Pradesh</option>
+                                <option value="mandsaur">Mandsaur, Madhya Pradesh</option>
+                                <option value="mandvi">Mandvi, Gujarat</option>
+                                <option value="mandya">Mandya, Karnataka</option>
+                                <option value="manendragarh">Manendragarh, Chhattisgarh</option>
+                                <option value="maner">Maner, Bihar</option>
+                                <option value="mangaldoi">Mangaldoi, Assam</option>
+                                <option value="mangaluru">Mangaluru, Karnataka</option>
+                                <option value="mangalvedhe">Mangalvedhe, Maharashtra</option>
+                                <option value="manglaur">Manglaur, Uttarakhand</option>
+                                <option value="mangrol">Mangrol, Rajasthan</option>
+                                <option value="mangrol">Mangrol, Gujarat</option>
+                                <option value="mangrulpir">Mangrulpir, Maharashtra</option>
+                                <option value="manihari">Manihari, Bihar</option>
+                                <option value="manjlegaon">Manjlegaon, Maharashtra</option>
+                                <option value="mankachar">Mankachar, Assam</option>
+                                <option value="manmad">Manmad, Maharashtra</option>
+                                <option value="mansa">Mansa, Punjab</option>
+                                <option value="mansa">Mansa, Gujarat</option>
+                                <option value="manuguru">Manuguru, Telangana</option>
+                                <option value="manvi">Manvi, Karnataka</option>
+                                <option value="manwath">Manwath, Maharashtra</option>
+                                <option value="mapusa">Mapusa, Goa</option>
+                                <option value="margao">Margao, Goa</option>
+                                <option value="margherita">Margherita, Assam</option>
+                                <option value="marhaura">Marhaura, Bihar</option>
+                                <option value="mariani">Mariani, Assam</option>
+                                <option value="marigaon">Marigaon, Assam</option>
+                                <option value="markapur">Markapur, Andhra Pradesh</option>
+                                <option value="marmagao">Marmagao, Goa</option>
+                                <option value="masaurhi">Masaurhi, Bihar</option>
+                                <option value="mathabhanga">Mathabhanga, West Bengal</option>
+                                <option value="mathura">Mathura, Uttar Pradesh</option>
+                                <option value="mattannur">Mattannur, Kerala</option>
+                                <option value="mauganj">Mauganj, Madhya Pradesh</option>
+                                <option value="mavelikkara">Mavelikkara, Kerala</option>
+                                <option value="mavoor">Mavoor, Kerala</option>
+                                <option value="mayang-imphal">Mayang Imphal, Manipur</option>
+                                <option value="medak">Medak, Telangana</option>
+                                <option value="medininagar-(daltonganj)">Medininagar (Daltonganj), Jharkhand</option>
+                                <option value="medinipur">Medinipur, West Bengal</option>
+                                <option value="meerut">Meerut, Uttar Pradesh</option>
+                                <option value="mehkar">Mehkar, Maharashtra</option>
+                                <option value="memari">Memari, West Bengal</option>
+                                <option value="merta-city">Merta City, Rajasthan</option>
+                                <option value="mhaswad">Mhaswad, Maharashtra</option>
+                                <option value="mhow-cantonment">Mhow Cantonment, Madhya Pradesh</option>
+                                <option value="mhowgaon">Mhowgaon, Madhya Pradesh</option>
+                                <option value="mihijam">Mihijam, Jharkhand</option>
+                                <option value="mira-bhayandar">Mira-Bhayandar, Maharashtra</option>
+                                <option value="mirganj">Mirganj, Bihar</option>
+                                <option value="miryalaguda">Miryalaguda, Telangana</option>
+                                <option value="mirzapur">Mirzapur, Uttar Pradesh</option>
+                                <option value="modasa">Modasa, Gujarat</option>
+                                <option value="modinagar">Modinagar, Uttar Pradesh</option>
+                                <option value="moga">Moga, Punjab</option>
+                                <option value="mohali">Mohali, Punjab</option>
+                                <option value="mokameh">Mokameh, Bihar</option>
+                                <option value="mokokchung">Mokokchung, Nagaland</option>
+                                <option value="monoharpur">Monoharpur, West Bengal</option>
+                                <option value="moradabad">Moradabad, Uttar Pradesh</option>
+                                <option value="morena">Morena, Madhya Pradesh</option>
+                                <option value="morinda,-india">Morinda, India, Punjab</option>
+                                <option value="morshi">Morshi, Maharashtra</option>
+                                <option value="morvi">Morvi, Gujarat</option>
+                                <option value="motihari">Motihari, Bihar</option>
+                                <option value="motipur">Motipur, Bihar</option>
+                                <option value="mount-abu">Mount Abu, Rajasthan</option>
+                                <option value="mudabidri">Mudabidri, Karnataka</option>
+                                <option value="mudalagi">Mudalagi, Karnataka</option>
+                                <option value="muddebihal">Muddebihal, Karnataka</option>
+                                <option value="mudhol">Mudhol, Karnataka</option>
+                                <option value="mukerian">Mukerian, Punjab</option>
+                                <option value="mukhed">Mukhed, Maharashtra</option>
+                                <option value="muktsar">Muktsar, Punjab</option>
+                                <option value="mul">Mul, Maharashtra</option>
+                                <option value="mulbagal">Mulbagal, Karnataka</option>
+                                <option value="multai">Multai, Madhya Pradesh</option>
+                                <option value="mumbai">Mumbai, Maharashtra</option>
+                                <option value="mundargi">Mundargi, Karnataka</option>
+                                <option value="mundi">Mundi, Madhya Pradesh</option>
+                                <option value="mungeli">Mungeli, Chhattisgarh</option>
+                                <option value="munger">Munger, Bihar</option>
+                                <option value="murliganj">Murliganj, Bihar</option>
+                                <option value="murshidabad">Murshidabad, West Bengal</option>
+                                <option value="murtijapur">Murtijapur, Maharashtra</option>
+                                <option value="murwara-(katni)">Murwara (Katni), Madhya Pradesh</option>
+                                <option value="musabani">Musabani, Jharkhand</option>
+                                <option value="mussoorie">Mussoorie, Uttarakhand</option>
+                                <option value="muvattupuzha">Muvattupuzha, Kerala</option>
+                                <option value="muzaffarpur">Muzaffarpur, Bihar</option>
+                                <option value="mysore1">Mysore, Karnataka</option>
+                                <option value="nabadwip">Nabadwip, West Bengal</option>
+                                <option value="nabarangapur">Nabarangapur, Odisha</option>
+                                <option value="nabha">Nabha, Punjab</option>
+                                <option value="nadbai">Nadbai, Rajasthan</option>
+                                <option value="nadiad">Nadiad, Gujarat</option>
+                                <option value="nagaon">Nagaon, Assam</option>
+                                <option value="nagapattinam">Nagapattinam, Tamil Nadu</option>
+                                <option value="nagar">Nagar, Rajasthan</option>
+                                <option value="nagari">Nagari, Andhra Pradesh</option>
+                                <option value="nagarkurnool">Nagarkurnool, Telangana</option>
+                                <option value="nagaur">Nagaur, Rajasthan</option>
+                                <option value="nagda">Nagda, Madhya Pradesh</option>
+                                <option value="nagercoil">Nagercoil, Tamil Nadu</option>
+                                <option value="nagina">Nagina, Uttar Pradesh</option>
+                                <option value="nagla">Nagla, Uttarakhand</option>
+                                <option value="nagpur1">Nagpur, Maharashtra</option>
+                                <option value="nahan">Nahan, Himachal Pradesh</option>
+                                <option value="naharlagun">Naharlagun, Arunachal Pradesh</option>
+                                <option value="naidupet">Naidupet, Andhra Pradesh</option>
+                                <option value="naihati">Naihati, West Bengal</option>
+                                <option value="naila-janjgir">Naila Janjgir, Chhattisgarh</option>
+                                <option value="nainital">Nainital, Uttarakhand</option>
+                                <option value="nainpur">Nainpur, Madhya Pradesh</option>
+                                <option value="najibabad">Najibabad, Uttar Pradesh</option>
+                                <option value="nakodar">Nakodar, Punjab</option>
+                                <option value="nakur">Nakur, Uttar Pradesh</option>
+                                <option value="nalbari">Nalbari, Assam</option>
+                                <option value="namagiripettai">Namagiripettai, Tamil Nadu</option>
+                                <option value="namakkal">Namakkal, Tamil Nadu</option>
+                                <option value="nanded-waghala">Nanded-Waghala, Maharashtra</option>
+                                <option value="nandgaon">Nandgaon, Maharashtra</option>
+                                <option value="nandivaram-guduvancheri">Nandivaram-Guduvancheri, Tamil Nadu</option>
+                                <option value="nandura">Nandura, Maharashtra</option>
+                                <option value="nandurbar">Nandurbar, Maharashtra</option>
+                                <option value="nandyal">Nandyal, Andhra Pradesh</option>
+                                <option value="nangal">Nangal, Punjab</option>
+                                <option value="nanjangud">Nanjangud, Karnataka</option>
+                                <option value="nanjikottai">Nanjikottai, Tamil Nadu</option>
+                                <option value="nanpara">Nanpara, Uttar Pradesh</option>
+                                <option value="narasapuram">Narasapuram, Andhra Pradesh</option>
+                                <option value="narasaraopet">Narasaraopet, Andhra Pradesh</option>
+                                <option value="naraura">Naraura, Uttar Pradesh</option>
+                                <option value="narayanpet">Narayanpet, Telangana</option>
+                                <option value="nargund">Nargund, Karnataka</option>
+                                <option value="narkatiaganj">Narkatiaganj, Bihar</option>
+                                <option value="narkhed">Narkhed, Maharashtra</option>
+                                <option value="narnaul">Narnaul, Haryana</option>
+                                <option value="narsinghgarh">Narsinghgarh, Madhya Pradesh</option>
+                                <option value="narsinghgarh">Narsinghgarh, Madhya Pradesh</option>
+                                <option value="narsipatnam">Narsipatnam, Andhra Pradesh</option>
+                                <option value="narwana">Narwana, Haryana</option>
+                                <option value="nashik">Nashik, Maharashtra</option>
+                                <option value="nasirabad">Nasirabad, Rajasthan</option>
+                                <option value="natham">Natham, Tamil Nadu</option>
+                                <option value="nathdwara">Nathdwara, Rajasthan</option>
+                                <option value="naugachhia">Naugachhia, Bihar</option>
+                                <option value="naugawan-sadat">Naugawan Sadat, Uttar Pradesh</option>
+                                <option value="nautanwa">Nautanwa, Uttar Pradesh</option>
+                                <option value="navalgund">Navalgund, Karnataka</option>
+                                <option value="navsari">Navsari, Gujarat</option>
+                                <option value="nawabganj">Nawabganj, Uttar Pradesh</option>
+                                <option value="nawada">Nawada, Bihar</option>
+                                <option value="nawanshahr">Nawanshahr, Punjab</option>
+                                <option value="nawapur">Nawapur, Maharashtra</option>
+                                <option value="nedumangad">Nedumangad, Kerala</option>
+                                <option value="neem-ka-thana">Neem-Ka-Thana, Rajasthan</option>
+                                <option value="neemuch">Neemuch, Madhya Pradesh</option>
+                                <option value="nehtaur">Nehtaur, Uttar Pradesh</option>
+                                <option value="nelamangala">Nelamangala, Karnataka</option>
+                                <option value="nellikuppam">Nellikuppam, Tamil Nadu</option>
+                                <option value="nellore">Nellore, Andhra Pradesh</option>
+                                <option value="nepanagar">Nepanagar, Madhya Pradesh</option>
+                                <option value="new-delhi">New Delhi, Delhi</option>
+                                <option value="neyveli-(ts)">Neyveli (TS), Tamil Nadu</option>
+                                <option value="neyyattinkara">Neyyattinkara, Kerala</option>
+                                <option value="nidadavole">Nidadavole, Andhra Pradesh</option>
+                                <option value="nilambur">Nilambur, Kerala</option>
+                                <option value="nilanga">Nilanga, Maharashtra</option>
+                                <option value="nimbahera">Nimbahera, Rajasthan</option>
+                                <option value="nirmal">Nirmal, Telangana</option>
+                                <option value="niwai">Niwai, Uttar Pradesh</option>
+                                <option value="niwari">Niwari, Madhya Pradesh</option>
+                                <option value="nizamabad">Nizamabad, Telangana</option>
+                                <option value="nohar">Nohar, Rajasthan</option>
+                                <option value="noida">Noida, Uttar Pradesh</option>
+                                <option value="nokha">Nokha, Rajasthan</option>
+                                <option value="nokha">Nokha, Bihar</option>
+                                <option value="nongstoin">Nongstoin, Meghalaya</option>
+                                <option value="noorpur">Noorpur, Uttar Pradesh</option>
+                                <option value="north-lakhimpur">North Lakhimpur, Assam</option>
+                                <option value="nowgong">Nowgong, Madhya Pradesh</option>
+                                <option value="nowrozabad-(khodargama)">Nowrozabad (Khodargama), Madhya Pradesh</option>
+                                <option value="nuzvid">Nuzvid, Andhra Pradesh</option>
+                                <option value="o&#39;-valley">O&#39; Valley, Tamil Nadu</option>
+                                <option value="obra">Obra, Uttar Pradesh</option>
+                                <option value="oddanchatram">Oddanchatram, Tamil Nadu</option>
+                                <option value="ongole">Ongole, Andhra Pradesh</option>
+                                <option value="orai">Orai, Uttar Pradesh</option>
+                                <option value="osmanabad">Osmanabad, Maharashtra</option>
+                                <option value="ottappalam">Ottappalam, Kerala</option>
+                                <option value="ozar">Ozar, Maharashtra</option>
+                                <option value="p.n.patti">P.N.Patti, Tamil Nadu</option>
+                                <option value="pachora">Pachora, Maharashtra</option>
+                                <option value="pachore">Pachore, Madhya Pradesh</option>
+                                <option value="pacode">Pacode, Tamil Nadu</option>
+                                <option value="padmanabhapuram">Padmanabhapuram, Tamil Nadu</option>
+                                <option value="padra">Padra, Gujarat</option>
+                                <option value="padrauna">Padrauna, Uttar Pradesh</option>
+                                <option value="paithan">Paithan, Maharashtra</option>
+                                <option value="pakaur">Pakaur, Jharkhand</option>
+                                <option value="palacole">Palacole, Andhra Pradesh</option>
+                                <option value="palai">Palai, Kerala</option>
+                                <option value="palakkad">Palakkad, Kerala</option>
+                                <option value="palampur">Palampur, Himachal Pradesh</option>
+                                <option value="palani">Palani, Tamil Nadu</option>
+                                <option value="palanpur">Palanpur, Gujarat</option>
+                                <option value="palasa-kasibugga">Palasa Kasibugga, Andhra Pradesh</option>
+                                <option value="palghar">Palghar, Maharashtra</option>
+                                <option value="pali">Pali, Rajasthan</option>
+                                <option value="pali">Pali, Madhya Pradesh</option>
+                                <option value="palia-kalan">Palia Kalan, Uttar Pradesh</option>
+                                <option value="palitana">Palitana, Gujarat</option>
+                                <option value="palladam">Palladam, Tamil Nadu</option>
+                                <option value="pallapatti">Pallapatti, Tamil Nadu</option>
+                                <option value="pallikonda">Pallikonda, Tamil Nadu</option>
+                                <option value="palwal">Palwal, Haryana</option>
+                                <option value="palwancha">Palwancha, Telangana</option>
+                                <option value="panagar">Panagar, Madhya Pradesh</option>
+                                <option value="panagudi">Panagudi, Tamil Nadu</option>
+                                <option value="panaji">Panaji, Goa</option>
+                                <option value="panamattom">Panamattom, Kerala</option>
+                                <option value="panchkula">Panchkula, Haryana</option>
+                                <option value="panchla">Panchla, West Bengal</option>
+                                <option value="pandharkaoda">Pandharkaoda, Maharashtra</option>
+                                <option value="pandharpur">Pandharpur, Maharashtra</option>
+                                <option value="pandhurna">Pandhurna, Madhya Pradesh</option>
+                                <option value="pandurban-agglomeration">PandUrban Agglomeration, West Bengal</option>
+                                <option value="panipat">Panipat, Haryana</option>
+                                <option value="panna">Panna, Madhya Pradesh</option>
+                                <option value="panniyannur">Panniyannur, Kerala</option>
+                                <option value="panruti">Panruti, Tamil Nadu</option>
+                                <option value="panvel">Panvel, Maharashtra</option>
+                                <option value="pappinisseri">Pappinisseri, Kerala</option>
+                                <option value="paradip">Paradip, Odisha</option>
+                                <option value="paramakudi">Paramakudi, Tamil Nadu</option>
+                                <option value="parangipettai">Parangipettai, Tamil Nadu</option>
+                                <option value="parasi">Parasi, Uttar Pradesh</option>
+                                <option value="paravoor">Paravoor, Kerala</option>
+                                <option value="parbhani">Parbhani, Maharashtra</option>
+                                <option value="pardi">Pardi, Gujarat</option>
+                                <option value="parlakhemundi">Parlakhemundi, Odisha</option>
+                                <option value="parli">Parli, Maharashtra</option>
+                                <option value="partur">Partur, Maharashtra</option>
+                                <option value="parvathipuram">Parvathipuram, Andhra Pradesh</option>
+                                <option value="pasan">Pasan, Madhya Pradesh</option>
+                                <option value="paschim-punropara">Paschim Punropara, West Bengal</option>
+                                <option value="pasighat">Pasighat, Arunachal Pradesh</option>
+                                <option value="patan">Patan, Gujarat</option>
+                                <option value="pathanamthitta">Pathanamthitta, Kerala</option>
+                                <option value="pathankot">Pathankot, Punjab</option>
+                                <option value="pathardi">Pathardi, Maharashtra</option>
+                                <option value="pathri">Pathri, Maharashtra</option>
+                                <option value="patiala">Patiala, Punjab</option>
+                                <option value="patna">Patna, Bihar</option>
+                                <option value="patratu">Patratu, Jharkhand</option>
+                                <option value="pattamundai">Pattamundai, Odisha</option>
+                                <option value="patti">Patti, Punjab</option>
+                                <option value="pattran">Pattran, Punjab</option>
+                                <option value="pattukkottai">Pattukkottai, Tamil Nadu</option>
+                                <option value="patur">Patur, Maharashtra</option>
+                                <option value="pauni">Pauni, Maharashtra</option>
+                                <option value="pauri">Pauri, Uttarakhand</option>
+                                <option value="pavagada">Pavagada, Karnataka</option>
+                                <option value="pedana">Pedana, Andhra Pradesh</option>
+                                <option value="peddapuram">Peddapuram, Andhra Pradesh</option>
+                                <option value="pehowa">Pehowa, Haryana</option>
+                                <option value="pen">Pen, Maharashtra</option>
+                                <option value="perambalur">Perambalur, Tamil Nadu</option>
+                                <option value="peravurani">Peravurani, Tamil Nadu</option>
+                                <option value="peringathur">Peringathur, Kerala</option>
+                                <option value="perinthalmanna">Perinthalmanna, Kerala</option>
+                                <option value="periyakulam">Periyakulam, Tamil Nadu</option>
+                                <option value="periyasemur">Periyasemur, Tamil Nadu</option>
+                                <option value="pernampattu">Pernampattu, Tamil Nadu</option>
+                                <option value="perumbavoor">Perumbavoor, Kerala</option>
+                                <option value="petlad">Petlad, Gujarat</option>
+                                <option value="phagwara">Phagwara, Punjab</option>
+                                <option value="phalodi">Phalodi, Rajasthan</option>
+                                <option value="phaltan">Phaltan, Maharashtra</option>
+                                <option value="phillaur">Phillaur, Punjab</option>
+                                <option value="phulabani">Phulabani, Odisha</option>
+                                <option value="phulera">Phulera, Rajasthan</option>
+                                <option value="phulpur">Phulpur, Uttar Pradesh</option>
+                                <option value="phusro">Phusro, Jharkhand</option>
+                                <option value="pihani">Pihani, Uttar Pradesh</option>
+                                <option value="pilani">Pilani, Rajasthan</option>
+                                <option value="pilibanga">Pilibanga, Rajasthan</option>
+                                <option value="pilibhit">Pilibhit, Uttar Pradesh</option>
+                                <option value="pilkhuwa">Pilkhuwa, Uttar Pradesh</option>
+                                <option value="pindwara">Pindwara, Rajasthan</option>
+                                <option value="pinjore">Pinjore, Haryana</option>
+                                <option value="pipar-city">Pipar City, Rajasthan</option>
+                                <option value="pipariya">Pipariya, Madhya Pradesh</option>
+                                <option value="piriyapatna">Piriyapatna, Karnataka</option>
+                                <option value="piro">Piro, Bihar</option>
+                                <option value="pithampur">Pithampur, Madhya Pradesh</option>
+                                <option value="pithapuram">Pithapuram, Andhra Pradesh</option>
+                                <option value="pithoragarh">Pithoragarh, Uttarakhand</option>
+                                <option value="pollachi">Pollachi, Tamil Nadu</option>
+                                <option value="polur">Polur, Tamil Nadu</option>
+                                <option value="pondicherry">Pondicherry, Puducherry</option>
+                                <option value="ponnani">Ponnani, Kerala</option>
+                                <option value="ponneri">Ponneri, Tamil Nadu</option>
+                                <option value="ponnur">Ponnur, Andhra Pradesh</option>
+                                <option value="porbandar">Porbandar, Gujarat</option>
+                                <option value="porsa">Porsa, Madhya Pradesh</option>
+                                <option value="port-blair">Port Blair, Andaman and Nicobar Islands</option>
+                                <option value="powayan">Powayan, Uttar Pradesh</option>
+                                <option value="prantij">Prantij, Rajasthan</option>
+                                <option value="pratapgarh">Pratapgarh, Tripura</option>
+                                <option value="pratapgarh">Pratapgarh, Rajasthan</option>
+                                <option value="prithvipur">Prithvipur, Madhya Pradesh</option>
+                                <option value="proddatur">Proddatur, Andhra Pradesh</option>
+                                <option value="pudukkottai">Pudukkottai, Tamil Nadu</option>
+                                <option value="pudupattinam">Pudupattinam, Tamil Nadu</option>
+                                <option value="pukhrayan">Pukhrayan, Uttar Pradesh</option>
+                                <option value="pulgaon">Pulgaon, Maharashtra</option>
+                                <option value="puliyankudi">Puliyankudi, Tamil Nadu</option>
+                                <option value="punalur">Punalur, Kerala</option>
+                                <option value="punch">Punch, Jammu and Kashmir</option>
+                                <option value="pune">Pune, Maharashtra</option>
+                                <option value="punganur">Punganur, Andhra Pradesh</option>
+                                <option value="punjaipugalur">Punjaipugalur, Tamil Nadu</option>
+                                <option value="puranpur">Puranpur, Uttar Pradesh</option>
+                                <option value="puri">Puri, Odisha</option>
+                                <option value="purna">Purna, Maharashtra</option>
+                                <option value="purnia">Purnia, Bihar</option>
+                                <option value="purqurban-agglomerationzi">PurqUrban Agglomerationzi, Uttar Pradesh
+                                </option>
+                                <option value="purulia">Purulia, West Bengal</option>
+                                <option value="purwa">Purwa, Uttar Pradesh</option>
+                                <option value="pusad">Pusad, Maharashtra</option>
+                                <option value="puthuppally">Puthuppally, Kerala</option>
+                                <option value="puttur">Puttur, Andhra Pradesh</option>
+                                <option value="puttur">Puttur, Karnataka</option>
+                                <option value="qadian">Qadian, Punjab</option>
+                                <option value="raayachuru">Raayachuru, Karnataka</option>
+                                <option value="rabkavi-banhatti">Rabkavi Banhatti, Karnataka</option>
+                                <option value="radhanpur">Radhanpur, Gujarat</option>
+                                <option value="rae-bareli">Rae Bareli, Uttar Pradesh</option>
+                                <option value="rafiganj">Rafiganj, Bihar</option>
+                                <option value="raghogarh-vijaypur">Raghogarh-Vijaypur, Madhya Pradesh</option>
+                                <option value="raghunathganj">Raghunathganj, West Bengal</option>
+                                <option value="raghunathpur">Raghunathpur, West Bengal</option>
+                                <option value="rahatgarh">Rahatgarh, Madhya Pradesh</option>
+                                <option value="rahuri">Rahuri, Maharashtra</option>
+                                <option value="raiganj">Raiganj, West Bengal</option>
+                                <option value="raigarh">Raigarh, Chhattisgarh</option>
+                                <option value="raikot">Raikot, Punjab</option>
+                                <option value="raipur">Raipur, Chhattisgarh</option>
+                                <option value="rairangpur">Rairangpur, Odisha</option>
+                                <option value="raisen">Raisen, Madhya Pradesh</option>
+                                <option value="raisinghnagar">Raisinghnagar, Rajasthan</option>
+                                <option value="rajagangapur">Rajagangapur, Odisha</option>
+                                <option value="rajahmundry">Rajahmundry, Andhra Pradesh</option>
+                                <option value="rajakhera">Rajakhera, Rajasthan</option>
+                                <option value="rajaldesar">Rajaldesar, Rajasthan</option>
+                                <option value="rajam">Rajam, Andhra Pradesh</option>
+                                <option value="rajampet">Rajampet, Andhra Pradesh</option>
+                                <option value="rajapalayam">Rajapalayam, Tamil Nadu</option>
+                                <option value="rajauri">Rajauri, Jammu and Kashmir</option>
+                                <option value="rajgarh">Rajgarh, Madhya Pradesh</option>
+                                <option value="rajgarh-(alwar)">Rajgarh (Alwar), Rajasthan</option>
+                                <option value="rajgarh-(churu)">Rajgarh (Churu), Rajasthan</option>
+                                <option value="rajgir">Rajgir, Bihar</option>
+                                <option value="rajkot">Rajkot, Gujarat</option>
+                                <option value="rajnandgaon">Rajnandgaon, Chhattisgarh</option>
+                                <option value="rajpipla">Rajpipla, Gujarat</option>
+                                <option value="rajpura">Rajpura, Punjab</option>
+                                <option value="rajsamand">Rajsamand, Rajasthan</option>
+                                <option value="rajula">Rajula, Gujarat</option>
+                                <option value="rajura">Rajura, Maharashtra</option>
+                                <option value="ramachandrapuram">Ramachandrapuram, Andhra Pradesh</option>
+                                <option value="ramagundam">Ramagundam, Telangana</option>
+                                <option value="ramanagaram">Ramanagaram, Karnataka</option>
+                                <option value="ramanathapuram">Ramanathapuram, Tamil Nadu</option>
+                                <option value="ramdurg">Ramdurg, Karnataka</option>
+                                <option value="rameshwaram">Rameshwaram, Tamil Nadu</option>
+                                <option value="ramganj-mandi">Ramganj Mandi, Rajasthan</option>
+                                <option value="ramgarh">Ramgarh, Jharkhand</option>
+                                <option value="ramnagar">Ramnagar, Bihar</option>
+                                <option value="ramnagar">Ramnagar, Uttarakhand</option>
+                                <option value="ramngarh">Ramngarh, Rajasthan</option>
+                                <option value="rampur">Rampur, Uttar Pradesh</option>
+                                <option value="rampur-maniharan">Rampur Maniharan, Uttar Pradesh</option>
+                                <option value="rampura-phul">Rampura Phul, Punjab</option>
+                                <option value="rampurhat">Rampurhat, West Bengal</option>
+                                <option value="ramtek">Ramtek, Maharashtra</option>
+                                <option value="ranaghat">Ranaghat, West Bengal</option>
+                                <option value="ranavav">Ranavav, Gujarat</option>
+                                <option value="ranchi1">Ranchi, Jharkhand</option>
+                                <option value="ranebennuru">Ranebennuru, Karnataka</option>
+                                <option value="rangia">Rangia, Assam</option>
+                                <option value="rania">Rania, Haryana</option>
+                                <option value="ranibennur">Ranibennur, Karnataka</option>
+                                <option value="ranipet">Ranipet, Tamil Nadu</option>
+                                <option value="rapar">Rapar, Gujarat</option>
+                                <option value="rasipuram">Rasipuram, Tamil Nadu</option>
+                                <option value="rasra">Rasra, Uttar Pradesh</option>
+                                <option value="ratangarh">Ratangarh, Rajasthan</option>
+                                <option value="rath">Rath, Uttar Pradesh</option>
+                                <option value="ratia">Ratia, Haryana</option>
+                                <option value="ratlam">Ratlam, Madhya Pradesh</option>
+                                <option value="ratnagiri">Ratnagiri, Maharashtra</option>
+                                <option value="rau">Rau, Madhya Pradesh</option>
+                                <option value="raurkela">Raurkela, Odisha</option>
+                                <option value="raver">Raver, Maharashtra</option>
+                                <option value="rawatbhata">Rawatbhata, Rajasthan</option>
+                                <option value="rawatsar">Rawatsar, Rajasthan</option>
+                                <option value="raxaul-bazar">Raxaul Bazar, Bihar</option>
+                                <option value="rayachoti">Rayachoti, Andhra Pradesh</option>
+                                <option value="rayadurg">Rayadurg, Andhra Pradesh</option>
+                                <option value="rayagada">Rayagada, Odisha</option>
+                                <option value="reengus">Reengus, Rajasthan</option>
+                                <option value="rehli">Rehli, Madhya Pradesh</option>
+                                <option value="renigunta">Renigunta, Andhra Pradesh</option>
+                                <option value="renukoot">Renukoot, Uttar Pradesh</option>
+                                <option value="reoti">Reoti, Uttar Pradesh</option>
+                                <option value="repalle">Repalle, Andhra Pradesh</option>
+                                <option value="revelganj">Revelganj, Bihar</option>
+                                <option value="rewa">Rewa, Madhya Pradesh</option>
+                                <option value="rewari">Rewari, Haryana</option>
+                                <option value="rishikesh">Rishikesh, Uttarakhand</option>
+                                <option value="risod">Risod, Maharashtra</option>
+                                <option value="robertsganj">Robertsganj, Uttar Pradesh</option>
+                                <option value="robertson-pet">Robertson Pet, Karnataka</option>
+                                <option value="rohtak">Rohtak, Haryana</option>
+                                <option value="ron">Ron, Karnataka</option>
+                                <option value="roorkee">Roorkee, Uttarakhand</option>
+                                <option value="rosera">Rosera, Bihar</option>
+                                <option value="rudauli">Rudauli, Uttar Pradesh</option>
+                                <option value="rudrapur">Rudrapur, Uttar Pradesh</option>
+                                <option value="rudrapur">Rudrapur, Uttarakhand</option>
+                                <option value="rupnagar">Rupnagar, Punjab</option>
+                                <option value="sabalgarh">Sabalgarh, Madhya Pradesh</option>
+                                <option value="sadabad">Sadabad, Uttar Pradesh</option>
+                                <option value="sadalagi">Sadalagi, Karnataka</option>
+                                <option value="sadasivpet">Sadasivpet, Telangana</option>
+                                <option value="sadri">Sadri, Rajasthan</option>
+                                <option value="sadulpur">Sadulpur, Rajasthan</option>
+                                <option value="sadulshahar">Sadulshahar, Rajasthan</option>
+                                <option value="safidon">Safidon, Haryana</option>
+                                <option value="safipur">Safipur, Uttar Pradesh</option>
+                                <option value="sagar">Sagar, Madhya Pradesh</option>
+                                <option value="sagara">Sagara, Karnataka</option>
+                                <option value="sagwara">Sagwara, Rajasthan</option>
+                                <option value="saharanpur">Saharanpur, Uttar Pradesh</option>
+                                <option value="saharsa">Saharsa, Bihar</option>
+                                <option value="sahaspur">Sahaspur, Uttar Pradesh</option>
+                                <option value="sahaswan">Sahaswan, Uttar Pradesh</option>
+                                <option value="sahawar">Sahawar, Uttar Pradesh</option>
+                                <option value="sahibganj">Sahibganj, Jharkhand</option>
+                                <option value="sahjanwa">Sahjanwa, Uttar Pradesh</option>
+                                <option value="saidpur">Saidpur, Uttar Pradesh</option>
+                                <option value="saiha">Saiha, Mizoram</option>
+                                <option value="sailu">Sailu, Maharashtra</option>
+                                <option value="sainthia">Sainthia, West Bengal</option>
+                                <option value="sakaleshapura">Sakaleshapura, Karnataka</option>
+                                <option value="sakti">Sakti, Chhattisgarh</option>
+                                <option value="salaya">Salaya, Gujarat</option>
+                                <option value="salem">Salem, Tamil Nadu</option>
+                                <option value="salur">Salur, Andhra Pradesh</option>
+                                <option value="samalkha">Samalkha, Haryana</option>
+                                <option value="samalkot">Samalkot, Andhra Pradesh</option>
+                                <option value="samana">Samana, Punjab</option>
+                                <option value="samastipur">Samastipur, Bihar</option>
+                                <option value="sambalpur">Sambalpur, Odisha</option>
+                                <option value="sambhal">Sambhal, Uttar Pradesh</option>
+                                <option value="sambhar">Sambhar, Rajasthan</option>
+                                <option value="samdhan">Samdhan, Uttar Pradesh</option>
+                                <option value="samthar">Samthar, Uttar Pradesh</option>
+                                <option value="sanand">Sanand, Gujarat</option>
+                                <option value="sanawad">Sanawad, Madhya Pradesh</option>
+                                <option value="sanchore">Sanchore, Rajasthan</option>
+                                <option value="sandi">Sandi, Uttar Pradesh</option>
+                                <option value="sandila">Sandila, Uttar Pradesh</option>
+                                <option value="sanduru">Sanduru, Karnataka</option>
+                                <option value="sangamner">Sangamner, Maharashtra</option>
+                                <option value="sangareddy">Sangareddy, Telangana</option>
+                                <option value="sangaria">Sangaria, Rajasthan</option>
+                                <option value="sangli">Sangli, Maharashtra</option>
+                                <option value="sangole">Sangole, Maharashtra</option>
+                                <option value="sangrur">Sangrur, Punjab</option>
+                                <option value="sankarankovil">Sankarankovil, Tamil Nadu</option>
+                                <option value="sankari">Sankari, Tamil Nadu</option>
+                                <option value="sankeshwara">Sankeshwara, Karnataka</option>
+                                <option value="santipur">Santipur, West Bengal</option>
+                                <option value="sarangpur">Sarangpur, Madhya Pradesh</option>
+                                <option value="sardarshahar">Sardarshahar, Rajasthan</option>
+                                <option value="sardhana">Sardhana, Uttar Pradesh</option>
+                                <option value="sarni">Sarni, Madhya Pradesh</option>
+                                <option value="sarsod">Sarsod, Haryana</option>
+                                <option value="sasaram">Sasaram, Bihar</option>
+                                <option value="sasvad">Sasvad, Maharashtra</option>
+                                <option value="satana">Satana, Maharashtra</option>
+                                <option value="satara">Satara, Maharashtra</option>
+                                <option value="sathyamangalam">Sathyamangalam, Tamil Nadu</option>
+                                <option value="satna">Satna, Madhya Pradesh</option>
+                                <option value="sattenapalle">Sattenapalle, Andhra Pradesh</option>
+                                <option value="sattur">Sattur, Tamil Nadu</option>
+                                <option value="saunda">Saunda, Jharkhand</option>
+                                <option value="saundatti-yellamma">Saundatti-Yellamma, Karnataka</option>
+                                <option value="sausar">Sausar, Madhya Pradesh</option>
+                                <option value="savanur">Savanur, Karnataka</option>
+                                <option value="savarkundla">Savarkundla, Gujarat</option>
+                                <option value="savner">Savner, Maharashtra</option>
+                                <option value="sawai-madhopur">Sawai Madhopur, Rajasthan</option>
+                                <option value="sawantwadi">Sawantwadi, Maharashtra</option>
+                                <option value="sedam">Sedam, Karnataka</option>
+                                <option value="sehore">Sehore, Madhya Pradesh</option>
+                                <option value="sendhwa">Sendhwa, Madhya Pradesh</option>
+                                <option value="seohara">Seohara, Uttar Pradesh</option>
+                                <option value="seoni">Seoni, Madhya Pradesh</option>
+                                <option value="seoni-malwa">Seoni-Malwa, Madhya Pradesh</option>
+                                <option value="shahabad">Shahabad, Karnataka</option>
+                                <option value="shahabad,-hardoi">Shahabad, Hardoi, Uttar Pradesh</option>
+                                <option value="shahabad,-rampur">Shahabad, Rampur, Uttar Pradesh</option>
+                                <option value="shahade">Shahade, Maharashtra</option>
+                                <option value="shahbad">Shahbad, Haryana</option>
+                                <option value="shahdol">Shahdol, Madhya Pradesh</option>
+                                <option value="shahganj">Shahganj, Uttar Pradesh</option>
+                                <option value="shahjahanpur">Shahjahanpur, Uttar Pradesh</option>
+                                <option value="shahpur">Shahpur, Karnataka</option>
+                                <option value="shahpura">Shahpura, Rajasthan</option>
+                                <option value="shahpura">Shahpura, Rajasthan</option>
+                                <option value="shajapur">Shajapur, Madhya Pradesh</option>
+                                <option value="shamgarh">Shamgarh, Madhya Pradesh</option>
+                                <option value="shamli">Shamli, Uttar Pradesh</option>
+                                <option value="shamsabad,-agra">Shamsabad, Agra, Uttar Pradesh</option>
+                                <option value="shamsabad,-farrukhabad">Shamsabad, Farrukhabad, Uttar Pradesh</option>
+                                <option value="shegaon">Shegaon, Maharashtra</option>
+                                <option value="sheikhpura">Sheikhpura, Bihar</option>
+                                <option value="shendurjana">Shendurjana, Maharashtra</option>
+                                <option value="shenkottai">Shenkottai, Tamil Nadu</option>
+                                <option value="sheoganj">Sheoganj, Rajasthan</option>
+                                <option value="sheohar">Sheohar, Bihar</option>
+                                <option value="sheopur">Sheopur, Madhya Pradesh</option>
+                                <option value="sherghati">Sherghati, Bihar</option>
+                                <option value="sherkot">Sherkot, Uttar Pradesh</option>
+                                <option value="shiggaon">Shiggaon, Karnataka</option>
+                                <option value="shikaripur">Shikaripur, Karnataka</option>
+                                <option value="shikarpur,-bulandshahr">Shikarpur, Bulandshahr, Uttar Pradesh</option>
+                                <option value="shikohabad">Shikohabad, Uttar Pradesh</option>
+                                <option value="shillong">Shillong, Meghalaya</option>
+                                <option value="shimla">Shimla, Himachal Pradesh</option>
+                                <option value="shirdi">Shirdi, Maharashtra</option>
+                                <option value="shirpur-warwade">Shirpur-Warwade, Maharashtra</option>
+                                <option value="shirur">Shirur, Maharashtra</option>
+                                <option value="shishgarh">Shishgarh, Uttar Pradesh</option>
+                                <option value="shivamogga">Shivamogga, Karnataka</option>
+                                <option value="shivpuri">Shivpuri, Madhya Pradesh</option>
+                                <option value="sholavandan">Sholavandan, Tamil Nadu</option>
+                                <option value="sholingur">Sholingur, Tamil Nadu</option>
+                                <option value="shoranur">Shoranur, Kerala</option>
+                                <option value="shrigonda">Shrigonda, Maharashtra</option>
+                                <option value="shrirampur">Shrirampur, Maharashtra</option>
+                                <option value="shrirangapattana">Shrirangapattana, Karnataka</option>
+                                <option value="shujalpur">Shujalpur, Madhya Pradesh</option>
+                                <option value="siana">Siana, Uttar Pradesh</option>
+                                <option value="sibsagar">Sibsagar, Assam</option>
+                                <option value="siddipet">Siddipet, Telangana</option>
+                                <option value="sidhi">Sidhi, Madhya Pradesh</option>
+                                <option value="sidhpur">Sidhpur, Gujarat</option>
+                                <option value="sidlaghatta">Sidlaghatta, Karnataka</option>
+                                <option value="sihor">Sihor, Gujarat</option>
+                                <option value="sihora">Sihora, Madhya Pradesh</option>
+                                <option value="sikanderpur">Sikanderpur, Uttar Pradesh</option>
+                                <option value="sikandra-rao">Sikandra Rao, Uttar Pradesh</option>
+                                <option value="sikandrabad">Sikandrabad, Uttar Pradesh</option>
+                                <option value="sikar">Sikar, Rajasthan</option>
+                                <option value="silao">Silao, Bihar</option>
+                                <option value="silapathar">Silapathar, Assam</option>
+                                <option value="silchar">Silchar, Assam</option>
+                                <option value="siliguri">Siliguri, West Bengal</option>
+                                <option value="sillod">Sillod, Maharashtra</option>
+                                <option value="silvassa">Silvassa, Dadra and Nagar Haveli</option>
+                                <option value="simdega">Simdega, Jharkhand</option>
+                                <option value="sindagi">Sindagi, Karnataka</option>
+                                <option value="sindhagi">Sindhagi, Karnataka</option>
+                                <option value="sindhnur">Sindhnur, Karnataka</option>
+                                <option value="singrauli">Singrauli, Madhya Pradesh</option>
+                                <option value="sinnar">Sinnar, Maharashtra</option>
+                                <option value="sira">Sira, Karnataka</option>
+                                <option value="sircilla">Sircilla, Telangana</option>
+                                <option value="sirhind-fatehgarh-sahib">Sirhind Fatehgarh Sahib, Punjab</option>
+                                <option value="sirkali">Sirkali, Tamil Nadu</option>
+                                <option value="sirohi">Sirohi, Rajasthan</option>
+                                <option value="sironj">Sironj, Madhya Pradesh</option>
+                                <option value="sirsa">Sirsa, Haryana</option>
+                                <option value="sirsaganj">Sirsaganj, Uttar Pradesh</option>
+                                <option value="sirsi">Sirsi, Karnataka</option>
+                                <option value="sirsi">Sirsi, Uttar Pradesh</option>
+                                <option value="siruguppa">Siruguppa, Karnataka</option>
+                                <option value="sitamarhi">Sitamarhi, Bihar</option>
+                                <option value="sitapur">Sitapur, Uttar Pradesh</option>
+                                <option value="sitarganj">Sitarganj, Uttarakhand</option>
+                                <option value="sivaganga">Sivaganga, Tamil Nadu</option>
+                                <option value="sivagiri">Sivagiri, Tamil Nadu</option>
+                                <option value="sivakasi">Sivakasi, Tamil Nadu</option>
+                                <option value="siwan">Siwan, Bihar</option>
+                                <option value="sohagpur">Sohagpur, Madhya Pradesh</option>
+                                <option value="sohna">Sohna, Haryana</option>
+                                <option value="sojat">Sojat, Rajasthan</option>
+                                <option value="solan">Solan, Himachal Pradesh</option>
+                                <option value="solapur">Solapur, Maharashtra</option>
+                                <option value="sonamukhi">Sonamukhi, West Bengal</option>
+                                <option value="sonepur">Sonepur, Bihar</option>
+                                <option value="songadh">Songadh, Gujarat</option>
+                                <option value="sonipat">Sonipat, Haryana</option>
+                                <option value="sopore">Sopore, Jammu and Kashmir</option>
+                                <option value="soro">Soro, Odisha</option>
+                                <option value="soron">Soron, Uttar Pradesh</option>
+                                <option value="soyagaon">Soyagaon, Maharashtra</option>
+                                <option value="sri-madhopur">Sri Madhopur, Rajasthan</option>
+                                <option value="srikakulam">Srikakulam, Andhra Pradesh</option>
+                                <option value="srikalahasti">Srikalahasti, Andhra Pradesh</option>
+                                <option value="srinagar">Srinagar, Uttarakhand</option>
+                                <option value="srinagar">Srinagar, Jammu and Kashmir</option>
+                                <option value="srinivaspur">Srinivaspur, Karnataka</option>
+                                <option value="srirampore">Srirampore, West Bengal</option>
+                                <option value="srisailam-project-(right-flank-colony)-township">Srisailam Project (Right
+                                    Flank Colony) Township, Andhra Pradesh</option>
+                                <option value="srivilliputhur">Srivilliputhur, Tamil Nadu</option>
+                                <option value="sugauli">Sugauli, Bihar</option>
+                                <option value="sujangarh">Sujangarh, Rajasthan</option>
+                                <option value="sujanpur">Sujanpur, Punjab</option>
+                                <option value="sullurpeta">Sullurpeta, Andhra Pradesh</option>
+                                <option value="sultanganj">Sultanganj, Bihar</option>
+                                <option value="sultanpur">Sultanpur, Uttar Pradesh</option>
+                                <option value="sumerpur">Sumerpur, Uttar Pradesh</option>
+                                <option value="sumerpur">Sumerpur, Rajasthan</option>
+                                <option value="sunabeda">Sunabeda, Odisha</option>
+                                <option value="sunam">Sunam, Punjab</option>
+                                <option value="sundargarh">Sundargarh, Odisha</option>
+                                <option value="sundarnagar">Sundarnagar, Himachal Pradesh</option>
+                                <option value="supaul">Supaul, Bihar</option>
+                                <option value="surandai">Surandai, Tamil Nadu</option>
+                                <option value="surapura">Surapura, Karnataka</option>
+                                <option value="surat">Surat, Gujarat</option>
+                                <option value="suratgarh">Suratgarh, Rajasthan</option>
+                                <option value="surban-agglomerationr">SUrban Agglomerationr, Uttar Pradesh</option>
+                                <option value="suri">Suri, West Bengal</option>
+                                <option value="suriyampalayam">Suriyampalayam, Tamil Nadu</option>
+                                <option value="suryapet">Suryapet, Telangana</option>
+                                <option value="tadepalligudem">Tadepalligudem, Andhra Pradesh</option>
+                                <option value="tadpatri">Tadpatri, Andhra Pradesh</option>
+                                <option value="takhatgarh">Takhatgarh, Rajasthan</option>
+                                <option value="taki">Taki, West Bengal</option>
+                                <option value="talaja">Talaja, Gujarat</option>
+                                <option value="talcher">Talcher, Odisha</option>
+                                <option value="talegaon-dabhade">Talegaon Dabhade, Maharashtra</option>
+                                <option value="talikota">Talikota, Karnataka</option>
+                                <option value="taliparamba">Taliparamba, Kerala</option>
+                                <option value="talode">Talode, Maharashtra</option>
+                                <option value="talwara">Talwara, Punjab</option>
+                                <option value="tamluk">Tamluk, West Bengal</option>
+                                <option value="tanda">Tanda, Uttar Pradesh</option>
+                                <option value="tandur">Tandur, Telangana</option>
+                                <option value="tanuku">Tanuku, Andhra Pradesh</option>
+                                <option value="tarakeswar">Tarakeswar, West Bengal</option>
+                                <option value="tarana">Tarana, Madhya Pradesh</option>
+                                <option value="taranagar">Taranagar, Rajasthan</option>
+                                <option value="taraori">Taraori, Haryana</option>
+                                <option value="tarbha">Tarbha, Odisha</option>
+                                <option value="tarikere">Tarikere, Karnataka</option>
+                                <option value="tarn-taran">Tarn Taran, Punjab</option>
+                                <option value="tasgaon">Tasgaon, Maharashtra</option>
+                                <option value="tehri">Tehri, Uttarakhand</option>
+                                <option value="tekkalakote">Tekkalakote, Karnataka</option>
+                                <option value="tenali">Tenali, Andhra Pradesh</option>
+                                <option value="tenkasi">Tenkasi, Tamil Nadu</option>
+                                <option value="tenu-dam-cum-kathhara">Tenu dam-cum-Kathhara, Jharkhand</option>
+                                <option value="terdal">Terdal, Karnataka</option>
+                                <option value="tezpur">Tezpur, Assam</option>
+                                <option value="thakurdwara">Thakurdwara, Uttar Pradesh</option>
+                                <option value="thammampatti">Thammampatti, Tamil Nadu</option>
+                                <option value="thana-bhawan">Thana Bhawan, Uttar Pradesh</option>
+                                <option value="thane">Thane, Maharashtra</option>
+                                <option value="thanesar">Thanesar, Haryana</option>
+                                <option value="thangadh">Thangadh, Gujarat</option>
+                                <option value="thanjavur">Thanjavur, Tamil Nadu</option>
+                                <option value="tharad">Tharad, Gujarat</option>
+                                <option value="tharamangalam">Tharamangalam, Tamil Nadu</option>
+                                <option value="tharangambadi">Tharangambadi, Tamil Nadu</option>
+                                <option value="theni-allinagaram">Theni Allinagaram, Tamil Nadu</option>
+                                <option value="thirumangalam">Thirumangalam, Tamil Nadu</option>
+                                <option value="thirupuvanam">Thirupuvanam, Tamil Nadu</option>
+                                <option value="thiruthuraipoondi">Thiruthuraipoondi, Tamil Nadu</option>
+                                <option value="thiruvalla">Thiruvalla, Kerala</option>
+                                <option value="thiruvallur">Thiruvallur, Tamil Nadu</option>
+                                <option value="thiruvananthapuram">Thiruvananthapuram, Kerala</option>
+                                <option value="thiruvarur">Thiruvarur, Tamil Nadu</option>
+                                <option value="thodupuzha">Thodupuzha, Kerala</option>
+                                <option value="thoubal">Thoubal, Manipur</option>
+                                <option value="thrissur">Thrissur, Kerala</option>
+                                <option value="thuraiyur">Thuraiyur, Tamil Nadu</option>
+                                <option value="tikamgarh">Tikamgarh, Madhya Pradesh</option>
+                                <option value="tilda-newra">Tilda Newra, Chhattisgarh</option>
+                                <option value="tilhar">Tilhar, Uttar Pradesh</option>
+                                <option value="tindivanam">Tindivanam, Tamil Nadu</option>
+                                <option value="tinsukia">Tinsukia, Assam</option>
+                                <option value="tiptur">Tiptur, Karnataka</option>
+                                <option value="tirora">Tirora, Maharashtra</option>
+                                <option value="tiruchendur">Tiruchendur, Tamil Nadu</option>
+                                <option value="tiruchengode">Tiruchengode, Tamil Nadu</option>
+                                <option value="tiruchirappalli">Tiruchirappalli, Tamil Nadu</option>
+                                <option value="tirukalukundram">Tirukalukundram, Tamil Nadu</option>
+                                <option value="tirukkoyilur">Tirukkoyilur, Tamil Nadu</option>
+                                <option value="tirunelveli">Tirunelveli, Tamil Nadu</option>
+                                <option value="tirupathur">Tirupathur, Tamil Nadu</option>
+                                <option value="tirupathur">Tirupathur, Tamil Nadu</option>
+                                <option value="tirupati">Tirupati, Andhra Pradesh</option>
+                                <option value="tiruppur">Tiruppur, Tamil Nadu</option>
+                                <option value="tirur">Tirur, Kerala</option>
+                                <option value="tiruttani">Tiruttani, Tamil Nadu</option>
+                                <option value="tiruvannamalai">Tiruvannamalai, Tamil Nadu</option>
+                                <option value="tiruvethipuram">Tiruvethipuram, Tamil Nadu</option>
+                                <option value="tiruvuru">Tiruvuru, Andhra Pradesh</option>
+                                <option value="tirwaganj">Tirwaganj, Uttar Pradesh</option>
+                                <option value="titlagarh">Titlagarh, Odisha</option>
+                                <option value="tittakudi">Tittakudi, Tamil Nadu</option>
+                                <option value="todabhim">Todabhim, Rajasthan</option>
+                                <option value="todaraisingh">Todaraisingh, Rajasthan</option>
+                                <option value="tohana">Tohana, Haryana</option>
+                                <option value="tonk">Tonk, Rajasthan</option>
+                                <option value="tuensang">Tuensang, Nagaland</option>
+                                <option value="tuljapur">Tuljapur, Maharashtra</option>
+                                <option value="tulsipur">Tulsipur, Uttar Pradesh</option>
+                                <option value="tumkur">Tumkur, Karnataka</option>
+                                <option value="tumsar">Tumsar, Maharashtra</option>
+                                <option value="tundla">Tundla, Uttar Pradesh</option>
+                                <option value="tuni">Tuni, Andhra Pradesh</option>
+                                <option value="tura">Tura, Meghalaya</option>
+                                <option value="uchgaon">Uchgaon, Maharashtra</option>
+                                <option value="udaipur">Udaipur, Rajasthan</option>
+                                <option value="udaipur-t">Udaipur T, Tripura</option>
+                                <option value="udaipurwati">Udaipurwati, Rajasthan</option>
+                                <option value="udgir">Udgir, Maharashtra</option>
+                                <option value="udhagamandalam">Udhagamandalam, Tamil Nadu</option>
+                                <option value="udhampur">Udhampur, Jammu and Kashmir</option>
+                                <option value="udumalaipettai">Udumalaipettai, Tamil Nadu</option>
+                                <option value="udupi">Udupi, Karnataka</option>
+                                <option value="ujhani">Ujhani, Uttar Pradesh</option>
+                                <option value="ujjain">Ujjain, Madhya Pradesh</option>
+                                <option value="umarga">Umarga, Maharashtra</option>
+                                <option value="umaria">Umaria, Madhya Pradesh</option>
+                                <option value="umarkhed">Umarkhed, Maharashtra</option>
+                                <option value="umbergaon">Umbergaon, Gujarat</option>
+                                <option value="umred">Umred, Maharashtra</option>
+                                <option value="umreth">Umreth, Gujarat</option>
+                                <option value="una">Una, Gujarat</option>
+                                <option value="unjha">Unjha, Gujarat</option>
+                                <option value="unnamalaikadai">Unnamalaikadai, Tamil Nadu</option>
+                                <option value="unnao">Unnao, Uttar Pradesh</option>
+                                <option value="upleta">Upleta, Gujarat</option>
+                                <option value="uran">Uran, Maharashtra</option>
+                                <option value="uran-islampur">Uran Islampur, Maharashtra</option>
+                                <option value="uravakonda">Uravakonda, Andhra Pradesh</option>
+                                <option value="urmar-tanda">Urmar Tanda, Punjab</option>
+                                <option value="usilampatti">Usilampatti, Tamil Nadu</option>
+                                <option value="uthamapalayam">Uthamapalayam, Tamil Nadu</option>
+                                <option value="uthiramerur">Uthiramerur, Tamil Nadu</option>
+                                <option value="utraula">Utraula, Uttar Pradesh</option>
+                                <option value="vadakkuvalliyur">Vadakkuvalliyur, Tamil Nadu</option>
+                                <option value="vadalur">Vadalur, Tamil Nadu</option>
+                                <option value="vadgaon-kasba">Vadgaon Kasba, Maharashtra</option>
+                                <option value="vadipatti">Vadipatti, Tamil Nadu</option>
+                                <option value="vadnagar">Vadnagar, Gujarat</option>
+                                <option value="vadodara">Vadodara, Gujarat</option>
+                                <option value="vaijapur">Vaijapur, Maharashtra</option>
+                                <option value="vaikom">Vaikom, Kerala</option>
+                                <option value="vaishali-nagar-jaipur">Vaishali Nagar Jaipur, Rajasthan</option>
+                                <option value="valparai">Valparai, Tamil Nadu</option>
+                                <option value="valsad">Valsad, Gujarat</option>
+                                <option value="vandavasi">Vandavasi, Tamil Nadu</option>
+                                <option value="vaniyambadi">Vaniyambadi, Tamil Nadu</option>
+                                <option value="vapi">Vapi, Gujarat</option>
+                                <option value="vapi">Vapi, Gujarat</option>
+                                <option value="varanasi">Varanasi, Uttar Pradesh</option>
+                                <option value="varkala">Varkala, Kerala</option>
+                                <option value="vasai-virar">Vasai-Virar, Maharashtra</option>
+                                <option value="vatakara">Vatakara, Kerala</option>
+                                <option value="vedaranyam">Vedaranyam, Tamil Nadu</option>
+                                <option value="vellakoil">Vellakoil, Tamil Nadu</option>
+                                <option value="vellore">Vellore, Tamil Nadu</option>
+                                <option value="venkatagiri">Venkatagiri, Andhra Pradesh</option>
+                                <option value="veraval">Veraval, Gujarat</option>
+                                <option value="vidisha">Vidisha, Madhya Pradesh</option>
+                                <option value="vijapur">Vijapur, Gujarat</option>
+                                <option value="vijayapura">Vijayapura, Karnataka</option>
+                                <option value="vijayawada">Vijayawada, Andhra Pradesh</option>
+                                <option value="vijaynagar-ajmer">VijayNagar Ajmer, Rajasthan</option>
+                                <option value="vijaypur">Vijaypur, Madhya Pradesh</option>
+                                <option value="vikarabad">Vikarabad, Telangana</option>
+                                <option value="vikramasingapuram">Vikramasingapuram, Tamil Nadu</option>
+                                <option value="viluppuram">Viluppuram, Tamil Nadu</option>
+                                <option value="vinukonda">Vinukonda, Andhra Pradesh</option>
+                                <option value="viramgam">Viramgam, Gujarat</option>
+                                <option value="virudhachalam">Virudhachalam, Tamil Nadu</option>
+                                <option value="virudhunagar">Virudhunagar, Tamil Nadu</option>
+                                <option value="visakhapatnam">Visakhapatnam, Andhra Pradesh</option>
+                                <option value="visnagar">Visnagar, Gujarat</option>
+                                <option value="viswanatham">Viswanatham, Tamil Nadu</option>
+                                <option value="vita">Vita, Maharashtra</option>
+                                <option value="vizianagaram">Vizianagaram, Andhra Pradesh</option>
+                                <option value="vrindavan">Vrindavan, Uttar Pradesh</option>
+                                <option value="vyara">Vyara, Gujarat</option>
+                                <option value="wadgaon-road">Wadgaon Road, Maharashtra</option>
+                                <option value="wadhwan">Wadhwan, Gujarat</option>
+                                <option value="wadi">Wadi, Karnataka</option>
+                                <option value="wai">Wai, Maharashtra</option>
+                                <option value="wanaparthy">Wanaparthy, Telangana</option>
+                                <option value="wani">Wani, Maharashtra</option>
+                                <option value="wankaner">Wankaner, Gujarat</option>
+                                <option value="wara-seoni">Wara Seoni, Madhya Pradesh</option>
+                                <option value="warangal">Warangal, Telangana</option>
+                                <option value="wardha">Wardha, Maharashtra</option>
+                                <option value="warhapur">Warhapur, Uttar Pradesh</option>
+                                <option value="warisaliganj">Warisaliganj, Bihar</option>
+                                <option value="warora">Warora, Maharashtra</option>
+                                <option value="warud">Warud, Maharashtra</option>
+                                <option value="washim">Washim, Maharashtra</option>
+                                <option value="wokha">Wokha, Nagaland</option>
+                                <option value="yadgir">Yadgir, Karnataka</option>
+                                <option value="yamunanagar">Yamunanagar, Haryana</option>
+                                <option value="yanam">Yanam, Puducherry</option>
+                                <option value="yavatmal">Yavatmal, Maharashtra</option>
+                                <option value="yawal">Yawal, Maharashtra</option>
+                                <option value="yellandu">Yellandu, Telangana</option>
+                                <option value="yemmiganur">Yemmiganur, Andhra Pradesh</option>
+                                <option value="yerraguntla">Yerraguntla, Andhra Pradesh</option>
+                                <option value="yevla">Yevla, Maharashtra</option>
+                                <option value="zaidpur">Zaidpur, Uttar Pradesh</option>
+                                <option value="zamania">Zamania, Uttar Pradesh</option>
+                                <option value="zira">Zira, Punjab</option>
+                                <option value="zirakpur">Zirakpur, Punjab</option>
+                                <option value="zunheboto">Zunheboto, Nagaland</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg- col-md-2 col-12 no-padd">
+                        <div class="form-box">
+                            <button onclick="fun_search();" type="button"
+                                class="btn btn-block theme-btn btn-default">SEARCH</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="gallery-banner">
+        <div class="container">
+            <div class="city-title">
+                <h1>Top Cities</h1>
+                <h1 id="color-text">Hotels and Resorts</h1>
+                <p>Ready to embark on your dream vacation? Book now and unlock a world of unparalleled luxury and
+                    comfort!</p>
+            </div>
+            <div class="gallery-city">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="" class="place-box">
+                            <div class="place-box-content">
+                                <h4>Bangalore</h4>
+                                <span>Hotels in Bangalore</span>
+                            </div>
+                            <div class="place-box-bg" style="background-image: url(./asset/img/place-1.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="" class="place-box">
+                            <div class="place-box-content">
+                                <h4>Hyderabad</h4>
+                                <span>Hotels in Hyderabad</span>
+                            </div>
+                            <div class="place-box-bg" style="background-image: url(./asset/img/place-4.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="" class="place-box">
+                            <div class="place-box-content">
+                                <h4>Jaipur</h4>
+                                <span>Hotels in Jaipur</span>
+                            </div>
+                            <div class="place-box-bg" style="background-image: url(./asset/img/place-8.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="" class="place-box">
+                            <div class="place-box-content">
+                                <h4>Nagpur</h4>
+                                <span>Hotels in Nagpur</span>
+                            </div>
+                            <div class="place-box-bg" style="background-image: url(./asset/img/place-9.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="" class="place-box">
+                            <div class="place-box-content">
+                                <h4>Mumbai</h4>
+                                <span>Hotels in Mumbai</span>
+                            </div>
+                            <div class="place-box-bg" style="background-image: url(./asset/img/place-7.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="" class="place-box">
+                            <div class="place-box-content">
+                                <h4>Chennai</h4>
+                                <span>Hotels in Chennai</span>
+                            </div>
+                            <div class="place-box-bg" style="background-image: url(./asset/img/place-5.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="" class="place-box">
+                            <div class="place-box-content">
+                                <h4>Udaipur</h4>
+                                <span>Hotels in Udaipur</span>
+                            </div>
+                            <div class="place-box-bg" style="background-image: url(./asset/img/place-2.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="" class="place-box">
+                            <div class="place-box-content">
+                                <h4>Delhi</h4>
+                                <span>Hotels in Delhi</span>
+                            </div>
+                            <div class="place-box-bg" style="background-image: url(./asset/img/place-3.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="" class="place-box">
+                            <div class="place-box-content">
+                                <h4>Mysore</h4>
+                                <span>Hotels in Mysore</span>
+                            </div>
+                            <div class="place-box-bg" style="background-image: url(./asset/img/place-6.jpg);"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="planning">
+        <div class="container">
+            <div class="planning-heading">
+                <h1>What Are You Planning In
+                    <span>Your Mind?</span>
+                </h1>
+                <p>Welcome to our world of hospitality and comfort! Indulge in a memorable experience at our exquisite
+                    hotels, where luxury meets convenience. Whether you seek a relaxing beachfront escape, a vibrant
+                    city retreat, or a tranquil countryside haven, our carefully curated selection of hotels ensures an
+                    unforgettable stay tailored to your preferences.</p>
+                <p>At HolidayIn, we prioritize your satisfaction and aim to exceed your
+                    expectations at every turn. Plan your next getaway with us and create cherished memories that last a
+                    lifetime.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="planning-box">
+                        <span class="ti-map-alt"><img width="30" height="30"
+                                src="https://img.icons8.com/external-outline-design-circle/30/ffffff/external-Find-location-seo-development-and-marketing-outline-design-circle.png"
+                                alt="external-Find-location-seo-development-and-marketing-outline-design-circle" /></span>
+                        <h4>Find a Hotels</h4>
+                        <p>Feel free to customize and expand upon this content to best showcase the unique features and
+                            offerings of your hotel booking platform.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="planning-box">
+                        <span class="ti-map-alt"><img width="30" height="30"
+                                src="https://img.icons8.com/ios/30/ffffff/new-post--v1.png" alt="new-post--v1" /></span>
+                        <h4>Contact a Few Owners</h4>
+                        <p>If you are interested and finding Hotels for stay and spend Vacation you can directly contact
+                            the owner to find a Hotell for your requirement basis.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="planning-box">
+                        <span class="ti-map-alt"><img width="30" height="30"
+                                src="https://img.icons8.com/pastel-glyph/30/ffffff/person-male--v3.png"
+                                alt="person-male--v3" /></span>
+                        <h4>Make a Reservation</h4>
+                        <p>Complete your reservation now with any kind of Hotels and enjoy all the day and
+                            night with your Family.</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+    <section class="tag-section">
+        <div class="container">
+            <div class="lp-tag-wrap">
+                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A ullam porro reprehenderit quae
+                    praesentium</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe minus, eaque ab rem ipsum voluptate
+                    rerum, maxime dolore quia, repellendus pariatur excepturi sapiente esse corporis mollitia ex nemo
+                    asperiores quo.</p>
+                <a href="#" class="btn" id="post-ad">Place your Hotel</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="report">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-10 offset-md-2 offset-sm-1">
+                    <div class="report-heading">
+                        <h1>Any Issue with ad Or Need Support!</h1>
+                        <p>Please write us by mail for best solution. we are happy to help you!</p>
+                        <p>contact@holidayin.com</p>
+                    </div>
+                    <form action="" class="sup-form">
+                        <input type="email" name="" id="" disabled class="form-control " value="contact@holidayin.com"
+                            required>
+                        <a href="" type="button" class="btn">Send Now</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="reviews-box">
+                        <span class="icon-bg"><img width="40" height="40"
+                                src="https://img.icons8.com/serif/40/DD0A6A/experimental-trophy-serif.png"
+                                alt="experimental-trophy-serif" /></span>
+                        <span class="counter" data-val="1000">000</span>
+                        <span class="counter-plus">+</span>
+                        <p>Cities Listing</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="reviews-box">
+                        <span class="icon-bg"><img width="40" height="40"
+                                src="https://img.icons8.com/sf-regular/40/DD0A6A/layers.png" alt="layers" /></span>
+                        <span class="counter" data-val="15000">000</span>
+                        <span class="counter-plus">+</span>
+                        <p>Services listing</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="reviews-box">
+                        <span class="icon-bg"><img width="40" height="40"
+                                src="https://img.icons8.com/ios/40/DD0A6A/happy--v1.png" alt="happy--v1" /></span>
+                        <span class="counter" data-val="10000">000</span>
+                        <span class="counter-plus">+</span>
+                        <p>Happy customers</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="reviews-box">
+                        <span class="icon-bg"><img width="40" height="40"
+                                src="https://img.icons8.com/ios/40/DD0A6A/cup--v1.png" alt="cup--v1" /></span>
+                        <span class="counter" data-val="15000">000</span>
+                        <span class="counter-plus">+</span>
+                        <p>Cups of cofee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="accordion-section">
+        <div class="container">
+            <div id="faq">
+                <ul>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In animi non</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ex consequatur eaque iusto
+                            placeat omnis aspernatur voluptate dolorem perferendis suscipit! Aut ipsam esse cumque
+                            perspiciatis, quos dolor itaque vero quis. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Cupiditate facilis sed magni iste est autem culpa necessitatibus?
+                            Reiciendis voluptates rerum tempora voluptatibus eveniet, consequuntur quo labore excepturi
+                            quos natus consequatur!</p>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In animi non.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In animi non, dignissimos impedit
+                            iste soluta ea fugiat eius sapiente, aspernatur blanditiis nisi atque sint quos tempore
+                            ducimus laboriosam odit ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
+                            quae doloribus. Quaerat assumenda, sit iure molestias harum voluptate et ullam magni
+                            corrupti in neque autem minima optio, nobis alias excepturi!</p>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In animi non</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione aut, accusamus
+                            id nesciunt eum eos expedita necessitatibus, quo maxime rerum! Architecto libero repudiandae
+                            eveniet neque quas quis rem officiis?</p>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In animi non</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit molestiae sit
+                            quibusdam impedit eius, id necessitatibus mollitia, distinctio est voluptatum nesciunt iure
+                            tenetur possimus. Fugiat nisi ipsum optio perferendis blanditiis!</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="description">
+        <div class="container">
+            <div class="desc-heading">
+                <h1>Special</h1>
+                <h1><span>HolidayIn Hotels</span></h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus deleniti dolorem laboriosam
+                    quasi ab temporibus pariatur voluptates quibusdam doloremque repellat a id veritatis maxime
+                    similique vel facilis, expedita quam possimus. Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Officia ad eveniet nemo voluptates. Excepturi, fugit commodi cumque itaque consequuntur quis!
+                    Nulla vel consequatur consequuntur modi fuga cumque ab architecto error?</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur excepturi officiis laboriosam
+                    inventore ratione a veniam fugit, autem officia sit assumenda magnam commodi incidunt aliquid
+                    quibusdam, hic omnis, doloremque ipsam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                    distinctio tenetur, eaque vero officiis eum molestias labore eius quas voluptatum exercitationem
+                    possimus veritatis expedita delectus quos magnam corrupti cum aut.</p>
+            </div>
+        </div>
+    </section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img width="18" height="18"
+            src="https://img.icons8.com/ios-filled/18/ffffff/double-up.png" alt="double-up" /></button>
+
+
+    <!---------Footer------->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 footer-about">
+                        <img class="logo-footer"
+                            src="asset/img/logo.png"
+                            alt="logo-footer" data-at2x="asset/img/logo.png">
+                        <p>
+                            We are a young company always looking for new and creative ideas to help you with our
+                            products in your everyday work.
+                        </p>
+                        <p><a href="#">Our Team</a></p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 footer-contact">
+                        <h3>Contact</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Via Rossini 10, 10136 Turin Italy</p>
+                        <p><i class="fas fa-phone"></i> Phone: (0039) 333 12 68 347</p>
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a>
+                        </p>
+                        <p><i class="fab fa-skype"></i> Skype: you_online</p>
+                    </div>
+                    <div class="col-md-4 footer-links">
+                        <div class="row">
+                            <div class="col">
+                                <h3>Links</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><a class="scroll-link" href="index.html">Home</a></p>
+                                <p><a href="#">Features</a></p>
+                                <p><a href="#">How it works</a></p>
+                                <p><a href="#">Our clients</a></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><a href="#">Plans &amp; pricing</a></p>
+                                <p><a href="#">Affiliates</a></p>
+                                <p><a href="#">Terms</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 footer-copyright">
+                        © Copyrights Reserved by <a href="index.html">HolidayIn</a>
+                    </div>
+                    <div class="col-md-6 footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Js -->
+    <script src="asset/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/12d555b0db.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
